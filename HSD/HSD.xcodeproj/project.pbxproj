@@ -14,6 +14,8 @@
 		3684DA1C2E5D089300A20ECE /* HSDTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3684DA1B2E5D089300A20ECE /* HSDTests.swift */; };
 		3684DA262E5D089300A20ECE /* HSDUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3684DA252E5D089300A20ECE /* HSDUITests.swift */; };
 		3684DA282E5D089300A20ECE /* HSDUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3684DA272E5D089300A20ECE /* HSDUITestsLaunchTests.swift */; };
+		3684DA362E5D0D1F00A20ECE /* RootCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3684DA352E5D0D1F00A20ECE /* RootCoordinator.swift */; };
+		3684DA382E5D0F6600A20ECE /* RootCoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3684DA372E5D0F6600A20ECE /* RootCoordinatorView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,8 @@
 		3684DA212E5D089300A20ECE /* HSDUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HSDUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3684DA252E5D089300A20ECE /* HSDUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HSDUITests.swift; sourceTree = "<group>"; };
 		3684DA272E5D089300A20ECE /* HSDUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HSDUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3684DA352E5D0D1F00A20ECE /* RootCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootCoordinator.swift; sourceTree = "<group>"; };
+		3684DA372E5D0F6600A20ECE /* RootCoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootCoordinatorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				3684DA0A2E5D089000A20ECE /* HSDApp.swift */,
+				3684DA342E5D0D0F00A20ECE /* Root */,
 				3684DA0C2E5D089000A20ECE /* ContentView.swift */,
 				3684DA0E2E5D089200A20ECE /* Assets.xcassets */,
 				3684DA102E5D089200A20ECE /* Preview Content */,
@@ -125,6 +130,15 @@
 				3684DA272E5D089300A20ECE /* HSDUITestsLaunchTests.swift */,
 			);
 			path = HSDUITests;
+			sourceTree = "<group>";
+		};
+		3684DA342E5D0D0F00A20ECE /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				3684DA352E5D0D1F00A20ECE /* RootCoordinator.swift */,
+				3684DA372E5D0F6600A20ECE /* RootCoordinatorView.swift */,
+			);
+			path = Root;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,7 +272,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				3684DA0D2E5D089000A20ECE /* ContentView.swift in Sources */,
+				3684DA362E5D0D1F00A20ECE /* RootCoordinator.swift in Sources */,
 				3684DA0B2E5D089000A20ECE /* HSDApp.swift in Sources */,
+				3684DA382E5D0F6600A20ECE /* RootCoordinatorView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
