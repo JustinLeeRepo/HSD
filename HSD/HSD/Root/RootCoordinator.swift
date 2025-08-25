@@ -9,5 +9,6 @@ import Combine
 import SwiftUI
 
 @Observable class RootCoordinator {
-    var isAuthorized = true
+    var isAuthorized = false
+    let unauthorizedCoordinator = UnauthorizedCoordinator()
 }

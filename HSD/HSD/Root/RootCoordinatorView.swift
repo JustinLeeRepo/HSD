@@ -12,10 +12,10 @@ struct RootCoordinatorView: View {
     
     var body: some View {
         if coordinator.isAuthorized {
-            ContentView()
+            Text("authorized")
         }
         else {
-            Text("Unauthorized View")
+            UnauthorizedCoordinatorView(coordinator: coordinator.unauthorizedCoordinator)
         }
     }
 }

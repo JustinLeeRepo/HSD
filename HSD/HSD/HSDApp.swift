@@ -10,8 +10,9 @@ import SwiftUI
 @main
 struct HSDApp: App {
     var body: some Scene {
+        var coordinator = RootCoordinator()
         WindowGroup {
-            ContentView()
+            RootCoordinatorView(coordinator: coordinator)
         }
     }
 }
