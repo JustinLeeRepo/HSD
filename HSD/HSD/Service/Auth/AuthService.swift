@@ -67,7 +67,9 @@ class AuthService: AuthServiceProtocol {
     }
     
     func expressSignIn() async throws {
-        let user = User(token: "Mila")
+        let token = "Mila"
+        try Keychain.shared.update(id: .authToken, stringData: token)
+        let user = User(token: token)
         Task { @MainActor in
             userState.setCurrentUser(user)
         }
@@ -75,8 +77,10 @@ class AuthService: AuthServiceProtocol {
     
     func signOut() async throws {
         guard let user = userState.user else { return }
+        try Keychain.shared.delete(id: .authToken)
+        
         let endpoint = AuthEndpoint(action: .signOut(user.token))
-        try await networkService.performRequest(endpoint)
+//        try await networkService.performRequest(endpoint)
         
         Task { @MainActor in
             userState.clearUser()

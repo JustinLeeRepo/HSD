@@ -11,8 +11,9 @@ struct RootCoordinatorView: View {
     var coordinator: RootCoordinator
     
     var body: some View {
-        if coordinator.isAuthorized {
-            Text("authorized")
+        if coordinator.isAuthorized,
+           let authorizedCoordinator = coordinator.authorizedCoordinator {
+            AuthorizedCoordinatorView(coordinator: authorizedCoordinator)
         }
         else {
             UnauthorizedCoordinatorView(coordinator: coordinator.unauthorizedCoordinator)

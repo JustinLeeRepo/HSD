@@ -12,6 +12,7 @@ import SwiftUI
     var isAuthorized = false
     
     let unauthorizedCoordinator = UnauthorizedCoordinator()
+    var authorizedCoordinator: AuthorizedCoordinator?
     
     private var authService = AuthService.shared
     private var currentUser = CurrentUser.shared
@@ -30,12 +31,12 @@ import SwiftUI
                 
                 if let user = user {
                     Task { @MainActor in
-                        
+                        self.authorizedCoordinator = AuthorizedCoordinator()
                     }
                 }
                 else {
                     Task { @MainActor in
-                        
+                        self.authorizedCoordinator = nil
                     }
                 }
             }

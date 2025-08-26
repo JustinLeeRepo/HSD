@@ -19,7 +19,16 @@ class CurrentUser: ObservableObject {
     @Published private(set) var user: User?
     @Published private(set) var isSignedIn: Bool = false
     
-    private init() {}
+    private init() {
+        initUser()
+    }
+    
+    private func initUser() {
+        if let token = try? Keychain.shared.get(id: .authToken) {
+            let user = User(token: token)
+            setCurrentUser(user)
+        }
+    }
     
     func setCurrentUser(_ user: User) {
         self.user = user
