@@ -29,6 +29,14 @@ struct UnauthorizedView: View {
             Label("Guest", systemImage: "person.slash")
         }
         .inputStyling()
+        
+        if let error = viewModel.error {
+            Text(error.localizedDescription)
+                .padding()
+                .font(.caption)
+                .foregroundStyle(.pink)
+                .opacity(viewModel.error == nil ? 0 : 1)
+        }
     }
 }
 

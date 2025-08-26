@@ -23,6 +23,7 @@
 		3684DA472E5D1BEB00A20ECE /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3684DA462E5D1BEB00A20ECE /* SignInView.swift */; };
 		3684DA4B2E5D21EF00A20ECE /* SignInModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3684DA4A2E5D21EF00A20ECE /* SignInModel.swift */; };
 		3684DA4E2E5D386800A20ECE /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3684DA4D2E5D386800A20ECE /* AuthService.swift */; };
+		3684DA502E5D87CC00A20ECE /* ServiceClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3684DA4F2E5D87CC00A20ECE /* ServiceClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		3684DA462E5D1BEB00A20ECE /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		3684DA4A2E5D21EF00A20ECE /* SignInModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInModel.swift; sourceTree = "<group>"; };
 		3684DA4D2E5D386800A20ECE /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		3684DA4F2E5D87CC00A20ECE /* ServiceClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				3684DA4D2E5D386800A20ECE /* AuthService.swift */,
+				3684DA4F2E5D87CC00A20ECE /* ServiceClient.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -334,6 +337,7 @@
 				3684DA452E5D1BE100A20ECE /* SignInViewModel.swift in Sources */,
 				3684DA402E5D16B500A20ECE /* UnauthorizedCoordinator.swift in Sources */,
 				3684DA382E5D0F6600A20ECE /* RootCoordinatorView.swift in Sources */,
+				3684DA502E5D87CC00A20ECE /* ServiceClient.swift in Sources */,
 				3684DA422E5D16C000A20ECE /* UnauthorizedCoordinatorView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
