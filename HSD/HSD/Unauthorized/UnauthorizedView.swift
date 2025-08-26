@@ -22,9 +22,9 @@ struct UnauthorizedView: View {
         .inputStyling()
         
         Button {
-//            Task {
-                /*await*/ viewModel.expressSignIn()
-//            }
+            Task {
+                await viewModel.expressSignIn()
+            }
         } label: {
             Label("Guest", systemImage: "person.slash")
         }

@@ -22,6 +22,7 @@
 		3684DA452E5D1BE100A20ECE /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3684DA442E5D1BE100A20ECE /* SignInViewModel.swift */; };
 		3684DA472E5D1BEB00A20ECE /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3684DA462E5D1BEB00A20ECE /* SignInView.swift */; };
 		3684DA4B2E5D21EF00A20ECE /* SignInModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3684DA4A2E5D21EF00A20ECE /* SignInModel.swift */; };
+		3684DA4E2E5D386800A20ECE /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3684DA4D2E5D386800A20ECE /* AuthService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		3684DA442E5D1BE100A20ECE /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 		3684DA462E5D1BEB00A20ECE /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		3684DA4A2E5D21EF00A20ECE /* SignInModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInModel.swift; sourceTree = "<group>"; };
+		3684DA4D2E5D386800A20ECE /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				3684DA0A2E5D089000A20ECE /* HSDApp.swift */,
+				3684DA4C2E5D319800A20ECE /* Service */,
 				3684DA342E5D0D0F00A20ECE /* Root */,
 				3684DA3E2E5D169900A20ECE /* UnauthorizedCoordinator */,
 				3684DA392E5D153C00A20ECE /* Unauthorized */,
@@ -181,6 +184,14 @@
 				3684DA462E5D1BEB00A20ECE /* SignInView.swift */,
 			);
 			path = SignIn;
+			sourceTree = "<group>";
+		};
+		3684DA4C2E5D319800A20ECE /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				3684DA4D2E5D386800A20ECE /* AuthService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -318,6 +329,7 @@
 				3684DA3B2E5D155E00A20ECE /* UnauthorizedViewModel.swift in Sources */,
 				3684DA0B2E5D089000A20ECE /* HSDApp.swift in Sources */,
 				3684DA472E5D1BEB00A20ECE /* SignInView.swift in Sources */,
+				3684DA4E2E5D386800A20ECE /* AuthService.swift in Sources */,
 				3684DA3D2E5D156800A20ECE /* UnauthorizedView.swift in Sources */,
 				3684DA452E5D1BE100A20ECE /* SignInViewModel.swift in Sources */,
 				3684DA402E5D16B500A20ECE /* UnauthorizedCoordinator.swift in Sources */,

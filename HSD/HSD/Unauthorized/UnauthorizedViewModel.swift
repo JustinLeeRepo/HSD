@@ -13,6 +13,7 @@ import SwiftUI
     var error: Error?
     
     private let unauthorizedEventPublisher: PassthroughSubject<UnauthorizedEvent, Never>
+    private let authService = AuthService.shared
     
     init(unauthorizedEventPublisher: PassthroughSubject<UnauthorizedEvent, Never>) {
         self.unauthorizedEventPublisher = unauthorizedEventPublisher
@@ -22,7 +23,7 @@ import SwiftUI
         unauthorizedEventPublisher.send(.proceedToSignIn)
     }
     
-    func expressSignIn()/* async*/ {
+    func expressSignIn() async {
         Task { @MainActor in
             withAnimation {
                 isLoading = true
@@ -30,7 +31,7 @@ import SwiftUI
         }
         
         do {
-            
+            try await authService.expressSignIn()
             
             Task {@MainActor in
                 withAnimation {

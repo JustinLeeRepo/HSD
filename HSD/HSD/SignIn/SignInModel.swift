@@ -19,17 +19,3 @@ struct SignInModel: Hashable {
     }
 }
 
-// TODO: remove this when auth service and auth service error is created
-enum SignInError: Error {
-    case noAuthService
-}
-
-extension SignInError: LocalizedError {
-    public var errorDescription: String? {
-        switch self {
-        case .noAuthService:
-            return NSLocalizedString("Auth service must be implemented.", comment: "My error")
-        }
-    }
-}
-

@@ -12,6 +12,8 @@ class SignInViewModel {
     var model: SignInModel
     var error: Error?
     
+    private let authService = AuthService.shared
+    
     init(model: SignInModel) {
         self.model = model
     }
@@ -63,18 +65,20 @@ class SignInViewModel {
     }
     
     func proceed(dismiss: @escaping () -> Void = {} ) {
-        do {
-            // TODO: create auth service and sign in api
-            throw SignInError.noAuthService
-            
-            dismiss()
-            Task { @MainActor in
-                self.error = nil
+        Task {
+            do {
+                // TODO: create auth service and sign in api
+                try await authService.signIn(username: usernameText, password: passwordText)
+                
+                dismiss()
+                Task { @MainActor in
+                    self.error = nil
+                }
             }
-        }
-        catch {
-            Task { @MainActor in
-                self.error = error
+            catch {
+                Task { @MainActor in
+                    self.error = error
+                }
             }
         }
     }
