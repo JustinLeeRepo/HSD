@@ -19,25 +19,31 @@ class AvailablePickUpDetailViewModel: Hashable {
     
     let formatter: NumberFormatter
     let ride: Ride
+    let cellViewModel: AvailablePickUpCellViewModel
     
     init(formatter: NumberFormatter, ride: Ride) {
         self.formatter = formatter
         self.ride = ride
-    }
-    
-    var estimatedEarnings: String {
-        return formatter.string(from: NSNumber(value: ride.estimatedEarnings)) ?? "$0.00"
-    }
-    
-    var startAddress: String? {
-        ride.startAddress
-    }
-    
-    var endAddress: String? {
-        ride.endAddress
+        self.cellViewModel = AvailablePickUpCellViewModel(formatter: formatter, ride: ride)
     }
     
     var score: String {
         return "\(ride.score)"
+    }
+    
+    var estimatedMiles: String {
+        return "\(ride.estimatedRideMiles)"
+    }
+    
+    var estimatedMinutes: String {
+        return "\(ride.estimatedRideMinutes)"
+    }
+    
+    var commuteMiles: String {
+        return "\(ride.commuteRideMiles)"
+    }
+    
+    var commuteMinutes: String {
+        return "\(ride.commuteRideMinutes)"
     }
 }

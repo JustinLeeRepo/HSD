@@ -11,26 +11,30 @@ struct AvailablePickUpDetailView: View {
     var viewModel: AvailablePickUpDetailViewModel
     
     var body: some View {
+        //TODO: abstract this 2 x 2 layout and reuse
+        AvailablePickUpCellView(viewModel: viewModel.cellViewModel)
+        
         HStack {
             VStack(alignment: .leading) {
-                Text("Estimated Earnings: \(viewModel.estimatedEarnings)")
+                Text("Estimated Miles: \(viewModel.estimatedMiles)")
                 
-                Text("Score: \(viewModel.score)")
+                Text("Estimated Minutes: \(viewModel.estimatedMinutes)")
             }
             .padding(.leading)
             
             Spacer()
             
             VStack(alignment: .leading) {
-                if let startAddress = viewModel.startAddress {
-                    Text("Pick Up: \(startAddress)")
-                }
+                Text("Commute Miles: \(viewModel.commuteMiles)")
                 
-                if let endAddress = viewModel.endAddress {
-                    Text("Drop Off: \(endAddress)")
-                }
+                Text("Commute Minutes: \(viewModel.commuteMinutes)")
             }
             .padding(.trailing)
+            
+            
+            //TODO: mapkit map with start waypoint lat long
+            //TODO: annotation for end waypoint lat long
+            //TODO: polyline connecting waypoints
         }
     }
 }
