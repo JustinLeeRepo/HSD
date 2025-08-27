@@ -66,6 +66,11 @@ struct Ride: Codable, Identifiable {
     var endAddress: String? {
         orderedWaypoints.last(where: { $0.waypointType == .dropOff })?.location.address
     }
+    
+    var estimatedEarnings: Double {
+        let earningsInDollar = Double(estimatedEarningsCents) / 100.00
+        return earningsInDollar
+    }
 }
 
 struct Waypoint: Codable {

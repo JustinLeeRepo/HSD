@@ -10,10 +10,15 @@ import Foundation
 @Observable
 class AvailablePickUpViewModel {
     let availableRideService = AvailableRidesService.shared
-    var availableRides: [Ride] = []
+    var cellViewModels: [AvailablePickUpCellViewModel] = []
     var error: Error?
+    let numberFormatter: NumberFormatter
     
     init() {
+        numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .currency
+        numberFormatter.locale = Locale(identifier: "en_US")
+        
         Task {
             await fetchRide()
         }
@@ -22,10 +27,10 @@ class AvailablePickUpViewModel {
     func fetchRide() async {
         do {
             let rides = try await availableRideService.fetchRides()
-            print("rides \(rides)")
-            print("yo")
+            let viewModels = rides.map { AvailablePickUpCellViewModel(formatter: numberFormatter, ride: $0) }
+            
             Task { @MainActor in
-                availableRides.append(contentsOf: rides)
+                self.cellViewModels.append(contentsOf: viewModels)
             }
         }
         catch {

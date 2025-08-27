@@ -13,21 +13,8 @@ struct AvailablePickUpView: View {
     var body: some View {
         ScrollView {
             LazyVStack {
-                ForEach(viewModel.availableRides) { ride in
-                    if let startAddress = ride.startAddress {
-                        Text("Start Address: \(startAddress)")
-                    }
-                    
-                    if let endAddress = ride.endAddress {
-                        Text("End Address: \(endAddress)")
-                    }
-                    
-                    Text("id : \(ride.id)")
-                    
-                    // TODO: convert to currency text
-                    Text("estimated earnings: \(ride.estimatedEarningsCents)")
-                    
-                    Text("score: \(ride.score)")
+                ForEach(viewModel.cellViewModels) { viewModel in
+                    AvailablePickUpCellView(viewModel: viewModel)
                 }
             }
         }
