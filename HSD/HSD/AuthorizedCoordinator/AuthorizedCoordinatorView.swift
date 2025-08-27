@@ -25,7 +25,7 @@ struct AuthorizedCoordinatorView: View {
             }
             .tag(Tab.first)
             
-            Text("2")
+            AvailablePickUpView(viewModel: coordinator.availablePickUpViewModel)
                 .tabItem {
                     generateLabel(title: "Two", image: "cat")
                 }

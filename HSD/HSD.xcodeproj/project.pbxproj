@@ -23,7 +23,17 @@
 		3684DA472E5D1BEB00A20ECE /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3684DA462E5D1BEB00A20ECE /* SignInView.swift */; };
 		3684DA4B2E5D21EF00A20ECE /* SignInModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3684DA4A2E5D21EF00A20ECE /* SignInModel.swift */; };
 		3684DA4E2E5D386800A20ECE /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3684DA4D2E5D386800A20ECE /* AuthService.swift */; };
-		3684DA502E5D87CC00A20ECE /* ServiceClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3684DA4F2E5D87CC00A20ECE /* ServiceClient.swift */; };
+		3684DA502E5D87CC00A20ECE /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3684DA4F2E5D87CC00A20ECE /* NetworkService.swift */; };
+		3684DA542E5E0E4D00A20ECE /* CurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3684DA532E5E0E4D00A20ECE /* CurrentUser.swift */; };
+		3684DA562E5E0EB000A20ECE /* AuthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3684DA552E5E0EB000A20ECE /* AuthModel.swift */; };
+		3684DA592E5E1DE000A20ECE /* NetworkServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3684DA582E5E1DE000A20ECE /* NetworkServiceProtocol.swift */; };
+		3684DA5C2E5E1F2B00A20ECE /* AuthorizedCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3684DA5B2E5E1F2A00A20ECE /* AuthorizedCoordinator.swift */; };
+		3684DA5E2E5E1F3800A20ECE /* AuthorizedCoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3684DA5D2E5E1F3800A20ECE /* AuthorizedCoordinatorView.swift */; };
+		3684DA652E5E2F4200A20ECE /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3684DA642E5E2F4200A20ECE /* Keychain.swift */; };
+		3684DA682E5E677100A20ECE /* AvailablePickUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3684DA672E5E677100A20ECE /* AvailablePickUpViewModel.swift */; };
+		3684DA6A2E5E677D00A20ECE /* AvailablePickUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3684DA692E5E677D00A20ECE /* AvailablePickUpView.swift */; };
+		3684DA6E2E5E6A0600A20ECE /* AvailableRideService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3684DA6D2E5E6A0600A20ECE /* AvailableRideService.swift */; };
+		3684DA702E5E972000A20ECE /* AvailableRideModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3684DA6F2E5E972000A20ECE /* AvailableRideModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,7 +73,17 @@
 		3684DA462E5D1BEB00A20ECE /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		3684DA4A2E5D21EF00A20ECE /* SignInModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInModel.swift; sourceTree = "<group>"; };
 		3684DA4D2E5D386800A20ECE /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
-		3684DA4F2E5D87CC00A20ECE /* ServiceClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceClient.swift; sourceTree = "<group>"; };
+		3684DA4F2E5D87CC00A20ECE /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		3684DA532E5E0E4D00A20ECE /* CurrentUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUser.swift; sourceTree = "<group>"; };
+		3684DA552E5E0EB000A20ECE /* AuthModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthModel.swift; sourceTree = "<group>"; };
+		3684DA582E5E1DE000A20ECE /* NetworkServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceProtocol.swift; sourceTree = "<group>"; };
+		3684DA5B2E5E1F2A00A20ECE /* AuthorizedCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizedCoordinator.swift; sourceTree = "<group>"; };
+		3684DA5D2E5E1F3800A20ECE /* AuthorizedCoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizedCoordinatorView.swift; sourceTree = "<group>"; };
+		3684DA642E5E2F4200A20ECE /* Keychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
+		3684DA672E5E677100A20ECE /* AvailablePickUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailablePickUpViewModel.swift; sourceTree = "<group>"; };
+		3684DA692E5E677D00A20ECE /* AvailablePickUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailablePickUpView.swift; sourceTree = "<group>"; };
+		3684DA6D2E5E6A0600A20ECE /* AvailableRideService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailableRideService.swift; sourceTree = "<group>"; };
+		3684DA6F2E5E972000A20ECE /* AvailableRideModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailableRideModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,11 +135,14 @@
 			isa = PBXGroup;
 			children = (
 				3684DA0A2E5D089000A20ECE /* HSDApp.swift */,
+				3684DA5F2E5E25BC00A20ECE /* Keychain */,
 				3684DA4C2E5D319800A20ECE /* Service */,
 				3684DA342E5D0D0F00A20ECE /* Root */,
 				3684DA3E2E5D169900A20ECE /* UnauthorizedCoordinator */,
 				3684DA392E5D153C00A20ECE /* Unauthorized */,
 				3684DA432E5D1BC800A20ECE /* SignIn */,
+				3684DA5A2E5E1F0B00A20ECE /* AuthorizedCoordinator */,
+				3684DA662E5E661900A20ECE /* AvailablePickUp */,
 				3684DA0E2E5D089200A20ECE /* Assets.xcassets */,
 				3684DA102E5D089200A20ECE /* Preview Content */,
 			);
@@ -191,10 +214,57 @@
 		3684DA4C2E5D319800A20ECE /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				3684DA4D2E5D386800A20ECE /* AuthService.swift */,
-				3684DA4F2E5D87CC00A20ECE /* ServiceClient.swift */,
+				3684DA572E5E0F2100A20ECE /* Auth */,
+				3684DA712E5E972500A20ECE /* AvailableRide */,
+				3684DA582E5E1DE000A20ECE /* NetworkServiceProtocol.swift */,
+				3684DA4F2E5D87CC00A20ECE /* NetworkService.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		3684DA572E5E0F2100A20ECE /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				3684DA552E5E0EB000A20ECE /* AuthModel.swift */,
+				3684DA4D2E5D386800A20ECE /* AuthService.swift */,
+				3684DA532E5E0E4D00A20ECE /* CurrentUser.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		3684DA5A2E5E1F0B00A20ECE /* AuthorizedCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				3684DA5B2E5E1F2A00A20ECE /* AuthorizedCoordinator.swift */,
+				3684DA5D2E5E1F3800A20ECE /* AuthorizedCoordinatorView.swift */,
+			);
+			path = AuthorizedCoordinator;
+			sourceTree = "<group>";
+		};
+		3684DA5F2E5E25BC00A20ECE /* Keychain */ = {
+			isa = PBXGroup;
+			children = (
+				3684DA642E5E2F4200A20ECE /* Keychain.swift */,
+			);
+			path = Keychain;
+			sourceTree = "<group>";
+		};
+		3684DA662E5E661900A20ECE /* AvailablePickUp */ = {
+			isa = PBXGroup;
+			children = (
+				3684DA672E5E677100A20ECE /* AvailablePickUpViewModel.swift */,
+				3684DA692E5E677D00A20ECE /* AvailablePickUpView.swift */,
+			);
+			path = AvailablePickUp;
+			sourceTree = "<group>";
+		};
+		3684DA712E5E972500A20ECE /* AvailableRide */ = {
+			isa = PBXGroup;
+			children = (
+				3684DA6F2E5E972000A20ECE /* AvailableRideModel.swift */,
+				3684DA6D2E5E6A0600A20ECE /* AvailableRideService.swift */,
+			);
+			path = AvailableRide;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -328,17 +398,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				3684DA4B2E5D21EF00A20ECE /* SignInModel.swift in Sources */,
+				3684DA6E2E5E6A0600A20ECE /* AvailableRideService.swift in Sources */,
+				3684DA5E2E5E1F3800A20ECE /* AuthorizedCoordinatorView.swift in Sources */,
 				3684DA362E5D0D1F00A20ECE /* RootCoordinator.swift in Sources */,
+				3684DA702E5E972000A20ECE /* AvailableRideModel.swift in Sources */,
 				3684DA3B2E5D155E00A20ECE /* UnauthorizedViewModel.swift in Sources */,
 				3684DA0B2E5D089000A20ECE /* HSDApp.swift in Sources */,
+				3684DA652E5E2F4200A20ECE /* Keychain.swift in Sources */,
 				3684DA472E5D1BEB00A20ECE /* SignInView.swift in Sources */,
 				3684DA4E2E5D386800A20ECE /* AuthService.swift in Sources */,
+				3684DA682E5E677100A20ECE /* AvailablePickUpViewModel.swift in Sources */,
 				3684DA3D2E5D156800A20ECE /* UnauthorizedView.swift in Sources */,
 				3684DA452E5D1BE100A20ECE /* SignInViewModel.swift in Sources */,
 				3684DA402E5D16B500A20ECE /* UnauthorizedCoordinator.swift in Sources */,
+				3684DA6A2E5E677D00A20ECE /* AvailablePickUpView.swift in Sources */,
+				3684DA5C2E5E1F2B00A20ECE /* AuthorizedCoordinator.swift in Sources */,
+				3684DA562E5E0EB000A20ECE /* AuthModel.swift in Sources */,
 				3684DA382E5D0F6600A20ECE /* RootCoordinatorView.swift in Sources */,
-				3684DA502E5D87CC00A20ECE /* ServiceClient.swift in Sources */,
+				3684DA502E5D87CC00A20ECE /* NetworkService.swift in Sources */,
 				3684DA422E5D16C000A20ECE /* UnauthorizedCoordinatorView.swift in Sources */,
+				3684DA542E5E0E4D00A20ECE /* CurrentUser.swift in Sources */,
+				3684DA592E5E1DE000A20ECE /* NetworkServiceProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

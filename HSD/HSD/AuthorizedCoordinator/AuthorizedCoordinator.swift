@@ -17,11 +17,13 @@ import Foundation
     }
     
     var tab: Tab = .first
-    var error: Error?
+    private(set) var error: Error?
     
+    var availablePickUpViewModel: AvailablePickUpViewModel
     private var cancellables = Set<AnyCancellable>()
     
     init() {
+        self.availablePickUpViewModel = AvailablePickUpViewModel()
     }
     
     func signOut() async {

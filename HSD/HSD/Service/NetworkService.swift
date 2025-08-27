@@ -8,8 +8,7 @@
 import Foundation
 
 class NetworkService: NetworkServiceProtocol {
-    //12daf8a6-cb58-42fd-9f78-1af6e4b12991
-    private let baseURL = "https://mocki.io/v1/"
+    private let baseURL = "https://mocki.io/v1"
     private let session: URLSession = .shared
     
     func performRequest<T: Codable>(_ endpoint: APIEndpoint) async throws -> T {
@@ -87,7 +86,7 @@ class NetworkService: NetworkServiceProtocol {
     private func decodeData<T: Codable>(
         data: Data,
         keyDecodingStrategy: JSONDecoder.KeyDecodingStrategy = .useDefaultKeys,
-        dateDecodingStrategy: JSONDecoder.DateDecodingStrategy = .deferredToDate,
+        dateDecodingStrategy: JSONDecoder.DateDecodingStrategy = .iso8601,
         dataDecodingStrategy: JSONDecoder.DataDecodingStrategy = .base64,
         nonConformingFloatDecodingStrategy: JSONDecoder.NonConformingFloatDecodingStrategy = .throw
     ) throws -> T {
