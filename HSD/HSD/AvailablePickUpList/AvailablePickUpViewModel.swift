@@ -36,7 +36,9 @@ class AvailablePickUpViewModel {
     func fetchRide() async {
         do {
             let rides = try await availableRideService.fetchRides()
-            let viewModels = rides.map { AvailablePickUpCellViewModel(formatter: numberFormatter, ride: $0) }
+            let viewModels = rides
+                .sorted { $0.score > $1.score } //!!! NOT PRE SORTED
+                .map { AvailablePickUpCellViewModel(formatter: numberFormatter, ride: $0) }
             
             Task { @MainActor in
                 self.cellViewModels.append(contentsOf: viewModels)
