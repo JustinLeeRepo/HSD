@@ -5,23 +5,32 @@
 //  Created by Justin Lee on 8/26/25.
 //
 
+import Combine
 import Foundation
+import SwiftUI
 
 @Observable
 class AvailablePickUpViewModel {
-    let availableRideService = AvailableRidesService.shared
     var cellViewModels: [AvailablePickUpCellViewModel] = []
     var error: Error?
-    let numberFormatter: NumberFormatter
     
-    init() {
-        numberFormatter = NumberFormatter()
-        numberFormatter.numberStyle = .currency
-        numberFormatter.locale = Locale(identifier: "en_US")
+    private let availableRideService = AvailableRidesService.shared
+    private let numberFormatter: NumberFormatter
+    private let availablePickUpEventPublisher: PassthroughSubject<AvailablePickUpEvent, Never>
+    
+    init(numberFormatter: NumberFormatter, eventPublisher: PassthroughSubject<AvailablePickUpEvent, Never>) {
+        self.numberFormatter = numberFormatter
+        self.availablePickUpEventPublisher = eventPublisher
         
         Task {
             await fetchRide()
         }
+    }
+    
+    func navigateDetail(cellViewModel: AvailablePickUpCellViewModel) {
+        let ride = cellViewModel.ride
+        let viewModel = AvailablePickUpDetailViewModel(formatter: numberFormatter, ride: ride)
+        availablePickUpEventPublisher.send(.proceedToDetail(viewModel))
     }
     
     func fetchRide() async {

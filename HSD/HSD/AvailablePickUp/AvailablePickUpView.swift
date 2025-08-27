@@ -5,6 +5,7 @@
 //  Created by Justin Lee on 8/26/25.
 //
 
+import Combine
 import SwiftUI
 
 struct AvailablePickUpView: View {
@@ -13,8 +14,12 @@ struct AvailablePickUpView: View {
     var body: some View {
         ScrollView {
             LazyVStack(spacing: 8) {
-                ForEach(viewModel.cellViewModels) { viewModel in
-                    AvailablePickUpCellView(viewModel: viewModel)
+                ForEach(viewModel.cellViewModels) { cellViewModel in
+                    Button {
+                        viewModel.navigateDetail(cellViewModel: cellViewModel)
+                    } label: {
+                        AvailablePickUpCellView(viewModel: cellViewModel)
+                    }
                 }
             }
         }
@@ -33,5 +38,7 @@ struct AvailablePickUpView: View {
 }
 
 #Preview {
-    AvailablePickUpView(viewModel: AvailablePickUpViewModel())
+    let eventPublisher = PassthroughSubject<AvailablePickUpEvent, Never>()
+    let viewModel = AvailablePickUpViewModel(numberFormatter: NumberFormatter(), eventPublisher: eventPublisher)
+    return AvailablePickUpView(viewModel: viewModel)
 }

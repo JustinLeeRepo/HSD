@@ -36,6 +36,10 @@
 		3684DA702E5E972000A20ECE /* AvailableRideModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3684DA6F2E5E972000A20ECE /* AvailableRideModel.swift */; };
 		3684DA742E5EDEC800A20ECE /* AvailablePickUpCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3684DA732E5EDEC800A20ECE /* AvailablePickUpCellViewModel.swift */; };
 		3684DA762E5EDED700A20ECE /* AvailablePickUpCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3684DA752E5EDED700A20ECE /* AvailablePickUpCellView.swift */; };
+		3684DA792E5F3F2E00A20ECE /* AvailablePickUpCoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3684DA782E5F3F2E00A20ECE /* AvailablePickUpCoordinatorView.swift */; };
+		3684DA7B2E5F3F3900A20ECE /* AvailablePickUpCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3684DA7A2E5F3F3900A20ECE /* AvailablePickUpCoordinator.swift */; };
+		3684DA7E2E5F40A700A20ECE /* AvailablePickUpDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3684DA7D2E5F40A700A20ECE /* AvailablePickUpDetailView.swift */; };
+		3684DA802E5F40B400A20ECE /* AvailablePickUpDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3684DA7F2E5F40B400A20ECE /* AvailablePickUpDetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +92,10 @@
 		3684DA6F2E5E972000A20ECE /* AvailableRideModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailableRideModel.swift; sourceTree = "<group>"; };
 		3684DA732E5EDEC800A20ECE /* AvailablePickUpCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailablePickUpCellViewModel.swift; sourceTree = "<group>"; };
 		3684DA752E5EDED700A20ECE /* AvailablePickUpCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailablePickUpCellView.swift; sourceTree = "<group>"; };
+		3684DA782E5F3F2E00A20ECE /* AvailablePickUpCoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailablePickUpCoordinatorView.swift; sourceTree = "<group>"; };
+		3684DA7A2E5F3F3900A20ECE /* AvailablePickUpCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailablePickUpCoordinator.swift; sourceTree = "<group>"; };
+		3684DA7D2E5F40A700A20ECE /* AvailablePickUpDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailablePickUpDetailView.swift; sourceTree = "<group>"; };
+		3684DA7F2E5F40B400A20ECE /* AvailablePickUpDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailablePickUpDetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,8 +154,10 @@
 				3684DA392E5D153C00A20ECE /* Unauthorized */,
 				3684DA432E5D1BC800A20ECE /* SignIn */,
 				3684DA5A2E5E1F0B00A20ECE /* AuthorizedCoordinator */,
+				3684DA772E5F3F1A00A20ECE /* AvailablePickUpCoordinator */,
 				3684DA662E5E661900A20ECE /* AvailablePickUp */,
 				3684DA722E5EDEA800A20ECE /* AvailablePickUpCell */,
+				3684DA7C2E5F409100A20ECE /* AvailablePickUpDetail */,
 				3684DA0E2E5D089200A20ECE /* Assets.xcassets */,
 				3684DA102E5D089200A20ECE /* Preview Content */,
 			);
@@ -279,6 +289,24 @@
 				3684DA752E5EDED700A20ECE /* AvailablePickUpCellView.swift */,
 			);
 			path = AvailablePickUpCell;
+			sourceTree = "<group>";
+		};
+		3684DA772E5F3F1A00A20ECE /* AvailablePickUpCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				3684DA7A2E5F3F3900A20ECE /* AvailablePickUpCoordinator.swift */,
+				3684DA782E5F3F2E00A20ECE /* AvailablePickUpCoordinatorView.swift */,
+			);
+			path = AvailablePickUpCoordinator;
+			sourceTree = "<group>";
+		};
+		3684DA7C2E5F409100A20ECE /* AvailablePickUpDetail */ = {
+			isa = PBXGroup;
+			children = (
+				3684DA7F2E5F40B400A20ECE /* AvailablePickUpDetailViewModel.swift */,
+				3684DA7D2E5F40A700A20ECE /* AvailablePickUpDetailView.swift */,
+			);
+			path = AvailablePickUpDetail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -424,15 +452,19 @@
 				3684DA472E5D1BEB00A20ECE /* SignInView.swift in Sources */,
 				3684DA4E2E5D386800A20ECE /* AuthService.swift in Sources */,
 				3684DA682E5E677100A20ECE /* AvailablePickUpViewModel.swift in Sources */,
+				3684DA792E5F3F2E00A20ECE /* AvailablePickUpCoordinatorView.swift in Sources */,
 				3684DA3D2E5D156800A20ECE /* UnauthorizedView.swift in Sources */,
 				3684DA452E5D1BE100A20ECE /* SignInViewModel.swift in Sources */,
+				3684DA7B2E5F3F3900A20ECE /* AvailablePickUpCoordinator.swift in Sources */,
 				3684DA402E5D16B500A20ECE /* UnauthorizedCoordinator.swift in Sources */,
 				3684DA6A2E5E677D00A20ECE /* AvailablePickUpView.swift in Sources */,
 				3684DA5C2E5E1F2B00A20ECE /* AuthorizedCoordinator.swift in Sources */,
 				3684DA562E5E0EB000A20ECE /* AuthModel.swift in Sources */,
 				3684DA382E5D0F6600A20ECE /* RootCoordinatorView.swift in Sources */,
 				3684DA502E5D87CC00A20ECE /* NetworkService.swift in Sources */,
+				3684DA802E5F40B400A20ECE /* AvailablePickUpDetailViewModel.swift in Sources */,
 				3684DA422E5D16C000A20ECE /* UnauthorizedCoordinatorView.swift in Sources */,
+				3684DA7E2E5F40A700A20ECE /* AvailablePickUpDetailView.swift in Sources */,
 				3684DA542E5E0E4D00A20ECE /* CurrentUser.swift in Sources */,
 				3684DA592E5E1DE000A20ECE /* NetworkServiceProtocol.swift in Sources */,
 			);

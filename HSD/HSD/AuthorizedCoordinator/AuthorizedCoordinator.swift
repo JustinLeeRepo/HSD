@@ -19,11 +19,11 @@ import Foundation
     var tab: Tab = .first
     private(set) var error: Error?
     
-    var availablePickUpViewModel: AvailablePickUpViewModel
+    let availablePickUpCoordinator: AvailablePickUpCoordinator
     private var cancellables = Set<AnyCancellable>()
     
     init() {
-        self.availablePickUpViewModel = AvailablePickUpViewModel()
+        self.availablePickUpCoordinator = AvailablePickUpCoordinator()
     }
     
     func signOut() async {
