@@ -12,7 +12,7 @@ struct AvailablePickUpView: View {
     
     var body: some View {
         ScrollView {
-            LazyVStack {
+            LazyVStack(spacing: 8) {
                 ForEach(viewModel.cellViewModels) { viewModel in
                     AvailablePickUpCellView(viewModel: viewModel)
                 }

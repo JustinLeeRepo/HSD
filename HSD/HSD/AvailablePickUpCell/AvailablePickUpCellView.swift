@@ -10,17 +10,42 @@ import SwiftUI
 struct AvailablePickUpCellView: View {
     var viewModel: AvailablePickUpCellViewModel
     var body: some View {
-        if let startAddress = viewModel.startAddress {
-            Text("Pick Up: \(startAddress)")
+        HStack {
+            VStack(alignment: .leading) {
+                Text("Estimated Earnings: \(viewModel.estimatedEarnings)")
+                
+                Text("Score: \(viewModel.score)")
+            }
+            .padding(.leading)
+            
+            Spacer()
+            
+            VStack(alignment: .leading) {
+                if let startAddress = viewModel.startAddress {
+                    Text("Pick Up: \(startAddress)")
+                }
+                
+                if let endAddress = viewModel.endAddress {
+                    Text("Drop Off: \(endAddress)")
+                }
+            }
+            .padding(.trailing)
         }
-        
-        if let endAddress = viewModel.endAddress {
-            Text("Drop Off: \(endAddress)")
+        .overlay {
+            RoundedRectangle(cornerRadius: 16)
+                .stroke(
+                    Color(.label)
+                        .opacity(0.1),
+                    lineWidth: 1
+                )
+                .shadow(
+                    color:
+                        Color(.label),
+                    radius: 2.0,
+                    x: 0,
+                    y: 0
+                )
         }
-        
-        Text("Estimated Earnings: \(viewModel.estimatedEarnings)")
-        
-        Text("Score: \(viewModel.score)")
     }
 }
 
