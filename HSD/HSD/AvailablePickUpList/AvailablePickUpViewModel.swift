@@ -14,13 +14,16 @@ class AvailablePickUpViewModel {
     var cellViewModels: [AvailablePickUpCellViewModel] = []
     var error: Error?
     
-    private let availableRideService = AvailableRidesService.shared
+    private let availableRideService: AvailableRidesServiceProtocol
     private let numberFormatter: NumberFormatter
     private let availablePickUpEventPublisher: PassthroughSubject<AvailablePickUpEvent, Never>
     
-    init(numberFormatter: NumberFormatter, eventPublisher: PassthroughSubject<AvailablePickUpEvent, Never>) {
+    init(numberFormatter: NumberFormatter, 
+         eventPublisher: PassthroughSubject<AvailablePickUpEvent, Never>,
+         availableRideService: AvailableRidesServiceProtocol = AvailableRidesService.shared) {
         self.numberFormatter = numberFormatter
         self.availablePickUpEventPublisher = eventPublisher
+        self.availableRideService = availableRideService
         
         Task {
             await fetchRide()

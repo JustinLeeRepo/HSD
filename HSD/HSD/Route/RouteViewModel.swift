@@ -68,7 +68,7 @@ class RouteViewModel {
     }
     
     //ai gen
-    private static func createCameraPositionWithRegion(waypoints: [Waypoint]/*_ startWaypoint: Waypoint, _ endWaypoint: Waypoint*/) -> MapCameraPosition {
+    internal static func createCameraPositionWithRegion(waypoints: [Waypoint]) -> MapCameraPosition {
         guard let startWaypoint = waypoints.first(where: { $0.waypointType == .pickUp }),
               let endWaypoint = waypoints.last(where: { $0.waypointType == .dropOff }) else {
             return .automatic

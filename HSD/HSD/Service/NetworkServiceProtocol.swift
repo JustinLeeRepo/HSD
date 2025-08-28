@@ -15,7 +15,7 @@ enum HTTPMethod: String {
     case PATCH = "PATCH"
 }
 
-enum ServiceError: Error, LocalizedError {
+enum ServiceError: Error, LocalizedError, Equatable{
     case invalidURL
     case noData
     case unauthorized
@@ -40,6 +40,23 @@ enum ServiceError: Error, LocalizedError {
             return "Failed to encode request"
         case .networkError(let error):
             return "Network error: \(error.localizedDescription)"
+        }
+    }
+    
+    static func == (lhs: ServiceError, rhs: ServiceError) -> Bool {
+        switch (lhs, rhs) {
+        case (.invalidURL, .invalidURL),
+             (.noData, .noData),
+             (.unauthorized, .unauthorized),
+             (.decodingError, .decodingError),
+             (.encodingError, .encodingError):
+            return true
+        case (.serverError(let code1), .serverError(let code2)):
+            return code1 == code2
+        case (.networkError(let err1), .networkError(let err2)):
+            return err1.localizedDescription == err2.localizedDescription
+        default:
+            return false
         }
     }
 }

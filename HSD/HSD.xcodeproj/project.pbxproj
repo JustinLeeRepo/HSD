@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3660302C2E60290B00290469 /* AvailablePickUpCellViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3660302B2E60290B00290469 /* AvailablePickUpCellViewModelTests.swift */; };
+		3660302E2E602B5F00290469 /* RouteViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3660302D2E602B5F00290469 /* RouteViewModelTests.swift */; };
+		366030302E6034C700290469 /* AvailablePickUpDetailViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3660302F2E6034C700290469 /* AvailablePickUpDetailViewModelTests.swift */; };
 		3684DA0B2E5D089000A20ECE /* HSDApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3684DA0A2E5D089000A20ECE /* HSDApp.swift */; };
 		3684DA0F2E5D089200A20ECE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3684DA0E2E5D089200A20ECE /* Assets.xcassets */; };
 		3684DA122E5D089200A20ECE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3684DA112E5D089200A20ECE /* Preview Assets.xcassets */; };
@@ -43,6 +46,7 @@
 		3684DA832E5F500200A20ECE /* RouteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3684DA822E5F500200A20ECE /* RouteView.swift */; };
 		3684DA852E5F500D00A20ECE /* RouteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3684DA842E5F500D00A20ECE /* RouteViewModel.swift */; };
 		3684DA872E5FA11C00A20ECE /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3684DA862E5FA11C00A20ECE /* String+Extensions.swift */; };
+		3684DA8A2E60153600A20ECE /* AvailablePickUpViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3684DA892E60153600A20ECE /* AvailablePickUpViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +67,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3660302B2E60290B00290469 /* AvailablePickUpCellViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailablePickUpCellViewModelTests.swift; sourceTree = "<group>"; };
+		3660302D2E602B5F00290469 /* RouteViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteViewModelTests.swift; sourceTree = "<group>"; };
+		3660302F2E6034C700290469 /* AvailablePickUpDetailViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailablePickUpDetailViewModelTests.swift; sourceTree = "<group>"; };
 		3684DA072E5D089000A20ECE /* HSD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HSD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3684DA0A2E5D089000A20ECE /* HSDApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HSDApp.swift; sourceTree = "<group>"; };
 		3684DA0E2E5D089200A20ECE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -102,6 +109,7 @@
 		3684DA822E5F500200A20ECE /* RouteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteView.swift; sourceTree = "<group>"; };
 		3684DA842E5F500D00A20ECE /* RouteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteViewModel.swift; sourceTree = "<group>"; };
 		3684DA862E5FA11C00A20ECE /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		3684DA892E60153600A20ECE /* AvailablePickUpViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailablePickUpViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,6 +192,10 @@
 			isa = PBXGroup;
 			children = (
 				3684DA1B2E5D089300A20ECE /* HSDTests.swift */,
+				3684DA892E60153600A20ECE /* AvailablePickUpViewModelTests.swift */,
+				3660302B2E60290B00290469 /* AvailablePickUpCellViewModelTests.swift */,
+				3660302F2E6034C700290469 /* AvailablePickUpDetailViewModelTests.swift */,
+				3660302D2E602B5F00290469 /* RouteViewModelTests.swift */,
 			);
 			path = HSDTests;
 			sourceTree = "<group>";
@@ -502,6 +514,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				366030302E6034C700290469 /* AvailablePickUpDetailViewModelTests.swift in Sources */,
+				3684DA8A2E60153600A20ECE /* AvailablePickUpViewModelTests.swift in Sources */,
+				3660302C2E60290B00290469 /* AvailablePickUpCellViewModelTests.swift in Sources */,
+				3660302E2E602B5F00290469 /* RouteViewModelTests.swift in Sources */,
 				3684DA1C2E5D089300A20ECE /* HSDTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
