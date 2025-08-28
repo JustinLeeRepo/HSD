@@ -14,6 +14,8 @@ struct AvailablePickUpDetailView: View {
         //TODO: abstract this 2 x 2 layout and reuse
         AvailablePickUpCellView(viewModel: viewModel.cellViewModel)
         
+        RouteView(viewModel: viewModel.routeViewModel)
+        
         HStack {
             VStack(alignment: .leading) {
                 Text("Estimated Miles: \(viewModel.estimatedMiles)")
@@ -30,11 +32,6 @@ struct AvailablePickUpDetailView: View {
                 Text("Commute Minutes: \(viewModel.commuteMinutes)")
             }
             .padding(.trailing)
-            
-            
-            //TODO: mapkit map with start waypoint lat long
-            //TODO: annotation for end waypoint lat long
-            //TODO: polyline connecting waypoints
         }
     }
 }

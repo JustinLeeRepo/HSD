@@ -18,16 +18,17 @@ struct AvailableRidesEndpoint: APIEndpoint {
         case fetchRidesPage(token: String, page: Int?, pageSize: Int?)
     }
     
+    let endpoint = "3aeeaafe-77fe-4953-b0a9-4300d332df7b"
     let action: Action
     
     var path: String {
         switch action {
             
         case .fetchRides(_):
-            return "12daf8a6-cb58-42fd-9f78-1af6e4b12991"
+            return endpoint
             
         case .fetchRidesPage(_, let page, let pageSize):
-            var path = "12daf8a6-cb58-42fd-9f78-1af6e4b12991"
+            var path = endpoint
             
             var queryComponents: [String] = []
             

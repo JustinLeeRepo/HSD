@@ -20,11 +20,13 @@ class AvailablePickUpDetailViewModel: Hashable {
     let formatter: NumberFormatter
     let ride: Ride
     let cellViewModel: AvailablePickUpCellViewModel
+    let routeViewModel: RouteViewModel
     
     init(formatter: NumberFormatter, ride: Ride) {
         self.formatter = formatter
         self.ride = ride
         self.cellViewModel = AvailablePickUpCellViewModel(formatter: formatter, ride: ride)
+        self.routeViewModel = RouteViewModel(polyLine: ride.overviewPolyline, waypoints: ride.orderedWaypoints, startTime: ride.startsAt, endTime: ride.endsAt)
     }
     
     var score: String {

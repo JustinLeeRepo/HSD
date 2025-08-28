@@ -1,0 +1,331 @@
+{
+  "rides": [
+    {
+      "ends_at": "2025-08-25T17:12:46Z",
+      "estimated_earnings_cents": 3800,
+      "estimated_ride_miles": 1.62,
+      "estimated_ride_minutes": 13,
+      "commute_ride_miles": 0.50,
+      "commute_ride_minutes": 5,
+      "score": 33.75,
+      "ordered_waypoints": [
+        {
+          "id": 2317941,
+          "location": {
+            "address": "East 41st Street, Los Angeles",
+            "lat": 34.0089813,
+            "lng": -118.2476647
+          },
+          "waypoint_type": "pick_up"
+        },
+        {
+          "id": 2317942,
+          "location": {
+            "address": "Alameda Street, Los Angeles",
+            "lat": 34.0252756,
+            "lng": -118.2395896
+          },
+          "waypoint_type": "drop_off"
+        }
+      ],
+      "overview_polyline": "eiqnEhgvpU|A{UNcD@o@wlA[WKaL[iAYgCoA{@]YQeEkA`AuFu@SCM\\sBYKCGGJI?",
+      "starts_at": "2025-08-25T17:00:00Z",
+      "trip_uuid": "0ffe54b9-f6ac-48ee-99bc-4dbf6ab45446"
+    },
+    {
+      "ends_at": "2025-08-25T22:39:03Z",
+      "estimated_earnings_cents": 3200,
+      "estimated_ride_miles": 18.91,
+      "estimated_ride_minutes": 56,
+      "commute_ride_miles": 4.0,
+      "commute_ride_minutes": 14,
+      "score": 22.54,
+      "ordered_waypoints": [
+        {
+          "id": 2319638,
+          "location": {
+            "address": "West 8th Street, Los Angeles",
+            "lat": 34.0578931,
+            "lng": -118.3039675
+          },
+          "waypoint_type": "pick_up"
+        },
+        {
+          "id": 2319639,
+          "location": {
+            "address": "West Carson Street, Torrance",
+            "lat": 33.8317992,
+            "lng": -118.3100151
+          },
+          "waypoint_type": "drop_off"
+        }
+      ],
+      "overview_polyline": "q}znExfaqU@eAFGr@@AuO~GCbJ?lBe@fCqA`Be@ZOr@Ep^?^HpAf@~@JnK?bADjGrArBBtCArAOjE_A^EvKGLJbFBKcGMgFK{@CgBJ_@FsJGmKLu_@@wC?kAAkF_@}HQSOeEUmBuAcIYuCMqBLk@AaEJkDL_AVw@f@{@rAcB`@s@h@eBZi@ZUh@Qr@ChJb@tDEhFYHQrPe@lBFhBPpBb@fBr@~DxBxLzG`DtA`FlBhS`LjCdAfCt@tCl@lDb@hDRjJDzI?fq@MzHOzTs@`I[vGKtE?hT^tPI~SM|B@pLh@zCJ~ODla@AjJCn\\?hd@PjZKzDQhd@mFfCIz@A~BFhSnA`OHrXHhEJzFZpR`BhGXl[p@|ERbH`@`C`@|Ab@rB|@r@^`CnBnFlF~BjBpCjBnCvAvB|@tC|@xCn@zC^fCPrDFrc@Bt`@R|OG|CObCWvPcCrCQzEMrSKhWYhES~Kw@xDInLEbXQvRAp@ExNCbZBfK\\tBDnACdHc@hJq@v@CnG?hQb@`LRt\\@vCL|Db@jq@lK|CTrDJtG?\\RhFZnBL|@BjCA@p@DHDj|@FfZB~JFtZAB@hJmBB?aCj@@",
+      "starts_at": "2025-08-25T21:43:00Z",
+      "trip_uuid": "d82526fd-c32b-414d-9645-52c2caa4800d"
+    },
+    {
+      "ends_at": "2025-08-26T03:34:02Z",
+      "estimated_earnings_cents": 4100,
+      "estimated_ride_miles": 34.37,
+      "estimated_ride_minutes": 49,
+      "commute_ride_miles": 6.0,
+      "commute_ride_minutes": 12,
+      "score": 41.66,
+      "ordered_waypoints": [
+        {
+          "id": 2317939,
+          "location": {
+            "address": "East 41st Street, Los Angeles",
+            "lat": 34.0089813,
+            "lng": -118.2476647
+          },
+          "waypoint_type": "pick_up"
+        },
+        {
+          "id": 2317940,
+          "location": {
+            "address": "West Edinger Avenue, Santa Ana",
+            "lat": 33.7269151,
+            "lng": -117.8971034
+          },
+          "waypoint_type": "drop_off"
+        }
+      ],
+      "overview_polyline": "eiqnEhgvpU|A{UNcDR{LAeCDwBDm@mJVyJLuGDwE]oCBYHwQ@}Yw@U?CvAOf@UZ}AhAo@Tc@?k@SY]}B{F]O{Qam@cA}Dm@wCgAyHa@cDDWi@_Hy@oIKaBGwAAkC`Ag^@mCLUFqHNeBX_BzCiJ^mANO|AyGnD_M|AaFhCmLdAkDvW_x@r@yCr@kEZ{CPwCFkDAcN@}ECaQDcIB}BTyC^kC|AaHdA}CzRqd@v@cC`@uB~BaNn@mCbQeg@p@{AzAeCv@_AtAqAzEcErBmBlB_CrAyBzBsEbAcBpBgC|NaQvDsDpTqSnA_AnBmAnGeDbBkAbCwBda@a`@nHaH~HuH~AqB|BsDlEmH|AqBne@qe@zCgClRqMxBmA~BeA`Cu@dc@gJvBo@|B}@`CqA~BcBlBeB|AeBhBeC|e@au@~QoYzBuCvB{BfByA~AiA|fA}n@~EoCfLuGbCoAhFyC`HiEtNcJlEqCvEuCnL_H|e@mZzNgJdEcDfD_D`DoDdCcDvCsE|AsCxJqSdByC`CiD~BoCxXkXjEyEpBgCtC_EjDuFxC}Ft@}AhPa_@pFeM`EmIhLaUdGkMhD}H`LmX|LqZbDqHbEaJfIyOpKmTpCiG~G_PlGqPxEsNrA{DxAqDdBuDzAoC`BsCnDkFhHwIzAkBrB{CxB{DpSyd@pDmI~Uci@dBcDpK{Q~ByEdAiCdPid@rB{Hp@oCf@gBrAoDx@gBnBeD|DwFbBqCdB_DxLaXpEuKjJiVxIiTzBwFlBwDtHsMpAmC|i@mnAx@uBz@wCf@gCNkAlDsUj@mC`AgDpA_DtAkCxAyB`BqB`XkYxBwBhDqC`O}K|DoDvMeN`FgFfL{LtOkP`E_Ez_@_a@hJaKfEgFlIiK`HuHrf@yg@xLeN`[i^hCkC|BqBdKyHlC{B~FeG~CgD^AxFmFPApDuC|CwCZI`@BZPRZPv@ArEEp@Uv@W^MNw@`@c@LUHDZZ`An@~Ad@bAn@`AbBfBx@l@fB|@LBDCvA\\nBT`CDj@?PN|C?NMlBAjGDRLrRHHOvCDrc@PLLhMPzI?d^F`EFxCLvJHhL@p@EvO?XBpIGpVC@~YAzHBxOhIBXCdFAj@DlD?nBLnBPdEDze@DfAB@xQ",
+      "starts_at": "2025-08-26T02:45:00Z",
+      "trip_uuid": "a44ca06b-5f0a-4eea-90d1-058f946fdd94"
+    },
+    {
+      "ends_at": "2025-08-29T15:00:00Z",
+      "estimated_earnings_cents": 2600,
+      "estimated_ride_miles": 15.39,
+      "estimated_ride_minutes": 45,
+      "commute_ride_miles": 3.0,
+      "commute_ride_minutes": 8,
+      "score": 39.56,
+      "ordered_waypoints": [
+        {
+          "id": 2321954,
+          "location": {
+            "address": "South 10th Avenue, Inglewood",
+            "lat": 33.9392759,
+            "lng": -118.3282516
+          },
+          "waypoint_type": "pick_up"
+        },
+        {
+          "id": 2321953,
+          "location": {
+            "address": "Century Park East, Los Angeles",
+            "lat": 34.0610347,
+            "lng": -118.413981
+          },
+          "waypoint_type": "drop_off"
+        }
+      ],
+      "overview_polyline": "}zcnEn~eqU?k@Cc@@_A?g@xEAJKB_@@iA@_@`QBtJA`A@x\\?b@CnODXl@lBjWLrBXd@NrGEvDO~CYzCg@dDs@~C{@lCuAbDsAdC}QpY_DfFgDtG_CjFaAlC_A~CgAzEeAlGa@fDS|CIlD?zDHvCX~CXxBbDjOGf@fCpOCp@vAjLFhAEfBQxA[nAg@jAy@nAu@r@}@d@oA`@iBXwCNcYb@gK?WXw[?{PJiCLwD^kLfBaE\\cDJeIAs]K{DLkDb@oJlB_O|CeCz@sAp@iBlAyArAuAdBoAvB_AtBmKxW_D`HaGvLoCtGeExKyBzFeM`]qAfCkA~AeBhBiBxAgpE`dDc`Atr@wSrOgWdRaB`BkAxA_FxH}AlBsApAeBpAeB`AaE~AmGzByCtAyBrAwAbA_JjHaN`L}@J_JzFkAz@mAbA[RuAfAgAyFcDuP}Fy[}BgM]{A_@gA_@q@_BgCwGuKgBiDeUg_@u@qAeAaBYm@M[kCkEmCoEeA{BeDiGuBeD{CoFiHqL|JkI",
+      "starts_at": "2025-08-29T14:14:41Z",
+      "uuid": "1184806b-ec97-4e4f-a169-3e3fe3f32ce9"
+    },
+    {
+      "ends_at": "2025-08-29T15:15:00Z",
+      "estimated_earnings_cents": 1800,
+      "estimated_ride_miles": 9.51,
+      "estimated_ride_minutes": 34,
+      "commute_ride_miles": 2.24,
+      "commute_ride_minutes": 8,
+      "score": 52.77,
+      "ordered_waypoints": [
+        {
+          "id": 2315149,
+          "location": {
+            "address": "East 3rd Street, Los Angeles",
+            "lat": 34.0442255,
+            "lng": -118.2337855
+          },
+          "waypoint_type": "pick_up"
+        },
+        {
+          "id": 2315148,
+          "location": {
+            "address": "West Jefferson Boulevard, Los Angeles",
+            "lat": 34.0253043,
+            "lng": -118.3573299
+          },
+          "waypoint_type": "drop_off"
+        }
+      ],
+      "overview_polyline": "sgxnEbqspUJDNJ\\q@T?lCzBtDmHb@cA|@iBX}@PgAJVv@fI`@EB@fBQh@GrQaAnBM|F_@bDONEb^G?qCjFCVFXNVXlA`D^NnSjq@j@pCVxBNnC?~BIhCUnCc@fCi@pB_AfCePv^wP``@mCvIeDnOg@pBgAhDsA~CeNzYoBlDkGbK{AxCiAzCy@rCUtAOfBIrB@`Ct@xVd@rFtC~UXrDN~DDzDg@lhBChB?bFIxWCxB@dHLtKXbKRnEp@fKbFdq@ThFzA~{@h@|XVbOOh@DrIFjE?x@F~B@p@VpMUp@[XWB[EWUK[A_@H_@PUVK~@EvGnBpCfALAzDjB`Cv@nLjDhRxLPP@`Lp@P",
+      "starts_at": "2025-08-29T14:41:04Z",
+      "uuid": "aaf54aa1-bf60-43d3-ba0c-6d5f3ff6056a"
+    },
+    {
+      "ends_at": "2025-08-29T21:10:55Z",
+      "estimated_earnings_cents": 3700,
+      "estimated_ride_miles": 23.26,
+      "estimated_ride_minutes": 61,
+      "commute_ride_miles": 5.2,
+      "commute_ride_minutes": 12,
+      "score": 47.5,
+      "ordered_waypoints": [
+        {
+          "id": 2323384,
+          "location": {
+            "address": "East Cypress Avenue, Burbank",
+            "lat": 34.1945252,
+            "lng": -118.3033854
+          },
+          "waypoint_type": "pick_up"
+        },
+        {
+          "id": 2323385,
+          "location": {
+            "address": "North Market Street, Inglewood",
+            "lat": 33.9751316,
+            "lng": -118.3564394
+          },
+          "waypoint_type": "drop_off"
+        }
+      ],
+      "overview_polyline": "wquoEvaaqU~BdC`NuSfCyDtA_CHC`D}EnGuJdTjUhUlV`CjC\\VbGxGzHhItDbEJV?LIPmDjFW[AQDO~BcENQA[zAmAxA}@xBy@bBc@dKmB~Ae@jAi@vAy@xAkAnAsAhA{Apd@wr@zBcDjBuBpBgBlBqApBiAvWoMlBmApB}A|BwBrBeCrB_D|AyChAoCfAiDbC_Kz@kClAoCrAyB|AoBbB_BlCcB`Bw@xBu@vCm@vSwDzMcBvDe@nCo@bLcDxH}A`HsAbSyDhg@oJjPaDlEmAbEyAnQuHtD_BfQwHfAq@hByAjAqAv@cAlEgHtE{HxCgGpBmE|M{\\~AeD~ByDxFaJbC_EhEwGbBuBpAqAxBgB~LqHdBuAve@{d@rGgGfCgCbCsCdCoDxBsDt@wA^IrIwNhSgZx@_Ap@k@t@]n@OxB[l@WpAw@vAo@dAWf@A`@L^\\~BdDR@|A`CtGzI~ChDrOpO|AhAxAt@bNbFd@V|A~@dAx@hAnAz@lAt@zAnN~]ZbA\\|A`AnHhA|E\\z@j@hAv@nAlRzTjGfIpBzB`FlFhDtDjEbEtCfC`@b@fInGhBhBpA`Bz@nAjBhDdb@xx@n@bA`AdAH^`BxBlCpCjB|AhAz@~CdBtAj@xAZXLhI~@p@Rn@b@l@v@P^Nf@Np@X`CL`Cb@vL\\~E|ClW^~DDh@FnANjIR`@e@jdBChB?bFIxWCxB@dHLtKXbKRnEp@fKbFdq@ThFzA~{@h@|XVbOOh@DrIFjE?x@F~B@p@VpMUp@[XWB[EWUK[A_@H_@PUVK~@EvGnBpCfALAzDjB`Cv@nLjDhRxLPP`D~@NIxBl@l@L|ANvAFlGAdKEZJ`EAn[MdEChBR~@VrAn@hAz@jDfDhAr@rAf@dAPlAFlAEnCQvABbALp]fHzAFlAGnAUhCeAjBq@tBe@dJy@NCt@Fn@Jx@Z|BhAlA^zAZdBN|F@xAInFo@fBIvJCz@?d@CZKhBQzA]rDkAzAWnAEvAHfCh@zIdBz@JbAB~AI`Ew@nJaB~AYJN|Ce@j@@hAP`CAT@?YIOPmDvEA?]",
+      "starts_at": "2025-08-29T20:10:00Z",
+      "uuid": "aaf54aa1-bf60-43d3-ba0c-6d5f3ff6037b"
+    },
+    {
+      "ends_at": "2025-08-29T19:59:17Z",
+      "estimated_earnings_cents": 1400,
+      "estimated_ride_miles": 4.42,
+      "estimated_ride_minutes": 19,
+      "commute_ride_miles": 1.31,
+      "commute_ride_minutes": 4,
+      "score": 55.21,
+      "ordered_waypoints": [
+        {
+          "id": 2323806,
+          "location": {
+            "address": "2nd Street, Long Beach",
+            "lat": 33.7585003,
+            "lng": -118.1128225
+          },
+          "waypoint_type": "pick_up",
+          "estimated_arrives_at": "2025-08-29T19:59:17Z"
+        },
+        {
+          "id": 2323807,
+          "location": {
+            "address": "California 1, Huntington Beach",
+            "lat": 33.7132225,
+            "lng": -118.0653839
+          },
+          "waypoint_type": "drop_off"
+        }
+      ],
+      "overview_polyline": "qo`mE|{{oUe@u@HKYe@~DuDxPwO`IeHnA_A`B{@`Aa@`A[hAUfAQxAGhPQzAKpBa@rBw@dBiA|@y@~AqBd@q@nQoc@lCwGzBuF`BsFhLe_@r@cBfAoBtAmB|@_Ar@m@vBuApAq@vAg@|^uJhAa@`B{@bCqBnCyCLOJSH]JCdL_Nn@aAj@wAhA}Db@mAFSj@gAbAsAdDsDhAu@`Ae@PB`BkAdE{E|BqCB_@hCgE`E_FRCzBgCJU?IrH_JpEgG|HiJj@n@",
+      "starts_at": "2025-08-29T19:40:00Z",
+      "uuid": "c2e1ec5a-44a9-4ba1-a8b2-76593aebbecd"
+    },
+    {
+      "ends_at": "2025-08-29T22:39:03Z",
+      "estimated_earnings_cents": 3200,
+      "estimated_ride_miles": 18.91,
+      "estimated_ride_minutes": 56,
+      "commute_ride_miles": 8.91,
+      "commute_ride_minutes": 29,
+      "score": 19.67,
+      "ordered_waypoints": [
+        {
+          "id": 2319646,
+          "location": {
+            "address": "West 8th Street, Los Angeles",
+            "lat": 34.0578931,
+            "lng": -118.3039675
+          },
+          "waypoint_type": "pick_up"
+        },
+        {
+          "id": 2319647,
+          "location": {
+            "address": "West Carson Street, Torrance",
+            "lat": 33.8317992,
+            "lng": -118.3100151
+          },
+          "waypoint_type": "drop_off"
+        }
+      ],
+      "overview_polyline": "q}znExfaqU@eAFGr@@AuO~GCbJ?lBe@fCqA`Be@ZOr@Ep^?^HpAf@~@JnK?bADjGrArBBtCArAOjE_A^EvKGLJbFBKcGMgFK{@CgBJ_@FsJGmKLu_@@wC?kAAkF_@}HQSOeEUmBuAcIYuCMqBLk@AaEJkDL_AVw@f@{@rAcB`@s@h@eBZi@ZUh@Qr@ChJb@tDEhFYHQrPe@lBFhBPpBb@fBr@~DxBxLzG`DtA`FlBhS`LjCdAfCt@tCl@lDb@hDRjJDzI?fq@MzHOzTs@`I[vGKtE?hT^tPI~SM|B@pLh@zCJ~ODla@AjJCn\\?hd@PjZKzDQhd@mFfCIz@A~BFhSnA`OHrXHhEJzFZpR`BhGXl[p@|ERbH`@`C`@|Ab@rB|@r@^`CnBnFlF~BjBpCjBnCvAvB|@tC|@xCn@zC^fCPrDFrc@Bt`@R|OG|CObCWvPcCrCQzEMrSKhWYhES~Kw@xDInLEbXQvRAp@ExNCbZBfK\\tBDnACdHc@hJq@v@CnG?hQb@`LRt\\@vCL|Db@jq@lK|CTrDJtG?\\RhFZnBL|@BjCA@p@DHDj|@FfZB~JFtZAB@hJmBB?aCj@@",
+      "starts_at": "2025-08-29T21:43:00Z",
+      "uuid": "30d7e70c-9fa5-4415-9b14-669368379f47"
+    },
+    {
+      "ends_at": "2025-08-29T23:27:23Z",
+      "estimated_earnings_cents": 1400,
+      "estimated_ride_miles": 2.73,
+      "estimated_ride_minutes": 17,
+      "commute_ride_miles": 0.50,
+      "commute_ride_minutes": 4,
+      "score": 50.33,
+      "ordered_waypoints": [
+        {
+          "id": 2318883,
+          "location": {
+            "address": "Ocean View Avenue, Los Angeles",
+            "lat": 34.062913,
+            "lng": -118.2785355
+          },
+          "waypoint_type": "pick_up"
+        },
+        {
+          "id": 2318884,
+          "location": {
+            "address": "East 2nd Street, Los Angeles",
+            "lat": 34.0487117,
+            "lng": -118.2413557
+          },
+          "waypoint_type": "drop_off"
+        }
+      ],
+      "overview_polyline": "qz{nErg|pUs@oZgAs@Tw@f@gD^sAbFgOfAwCfC_IDQq@c@Y]}CsFSk@YIoBa@YWuEsG`AqCd@uAj@uAhAgCNo@~@oC@QnBuFvE_NzDzBvCoCfD}Ft@yA|H_NpAeCtKwRrOsXxC{FZm@|EcJ\\m@",
+      "starts_at": "2025-08-29T23:10:00Z",
+      "uuid": "0c2a521b-6f98-493b-831c-8742a3b3db81"
+    },
+    {
+      "ends_at": "2025-08-30T05:00:00Z",
+      "estimated_earnings_cents": 1700,
+      "estimated_ride_miles": 10.56,
+      "estimated_ride_minutes": 21,
+      "commute_ride_miles": 2.4,
+      "commute_ride_minutes": 4,
+      "score": 54.33,
+      "ordered_waypoints": [
+        {
+          "id": 2314502,
+          "location": {
+            "address": "West Jefferson Boulevard, Los Angeles",
+            "lat": 34.0253043,
+            "lng": -118.3573299
+          },
+          "waypoint_type": "pick_up"
+        },
+        {
+          "id": 2314501,
+          "location": {
+            "address": "East 3rd Street, Los Angeles",
+            "lat": 34.0442255,
+            "lng": -118.2337855
+          },
+          "waypoint_type": "drop_off"
+        }
+      ],
+      "overview_polyline": "yptnEbskqUq@QAaLBYUFsR}L}NiEoAi@uCwAOWoBaAm@SFsCKc@}AkCc@eAQ_AKaDCO]kJGcAGe@KIy@wc@i@sXIoGc@mT[aPY}F{@mLKyB_Dma@_@uFa@oKSoIGeHAkSF{QBsB@sHJuW\\woALWq@wRSgBwAmIYuC[cGSeIIiJEoGFaBLqATwA\\gAt@mBjA}BzG{KlBqDhOc\\jA}Cp@aCx@oDtB_KxAiF|AsE|Qcb@bN{Zv@wBl@yB`@}BRkBN}B@kDAoAU}C]aCg@{BmUyu@cA}Dm@wCgAyHa@cDw@aGo@iFi@yBYu@{@_Bw@cAkAeAkP{JaCwAwAq@mAc@yA]qASoD_@UMoJw@_BU_Ba@{@]kCqAsAw@Oa@kEiDiBkBs@_@u@~BKhAn@n_@jEvTt@`EFnAJhTA^QfA[bAqAfCM^qCrFwAJ_BoAQB[n@WOCA",
+      "starts_at": "2025-08-30T04:38:42Z",
+      "uuid": "129dcd6d-7412-4f7e-bd3a-f80d378e0997"
+    }
+  ],
+  "pagination": {
+    "current_page": 1,
+    "page_size": 5,
+    "next_page": 2,
+    "total_pages": 2
+  }
+}

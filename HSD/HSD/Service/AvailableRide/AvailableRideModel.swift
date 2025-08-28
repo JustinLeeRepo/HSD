@@ -60,11 +60,19 @@ struct Ride: Codable, Identifiable {
     }
     
     var startAddress: String? {
-        orderedWaypoints.first(where: { $0.waypointType == .pickUp })?.location.address
+        startWaypoint?.location.address
     }
      
     var endAddress: String? {
-        orderedWaypoints.last(where: { $0.waypointType == .dropOff })?.location.address
+        endWaypoint?.location.address
+    }
+    
+    var startWaypoint: Waypoint? {
+        orderedWaypoints.first { $0.waypointType == .pickUp }
+    }
+    
+    var endWaypoint: Waypoint? {
+        orderedWaypoints.last { $0.waypointType == .dropOff }
     }
     
     var estimatedEarnings: Double {
@@ -73,7 +81,15 @@ struct Ride: Codable, Identifiable {
     }
 }
 
-struct Waypoint: Codable {
+struct Waypoint: Codable, Identifiable, Hashable {
+    static func == (lhs: Waypoint, rhs: Waypoint) -> Bool {
+        lhs.id == rhs.id
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
+    
     let id: Int
     let location: Location
     let waypointType: WaypointType
@@ -88,6 +104,13 @@ struct Waypoint: Codable {
 enum WaypointType: String, Codable {
     case pickUp = "pick_up"
     case dropOff = "drop_off"
+    
+    var displayName: String {
+        switch self {
+        case .pickUp: return "Pick up"
+        case .dropOff: return "Drop off"
+        }
+    }
 }
 
 struct Location: Codable {

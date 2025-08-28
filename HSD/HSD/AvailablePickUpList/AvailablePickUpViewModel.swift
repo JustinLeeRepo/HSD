@@ -21,6 +21,10 @@ class AvailablePickUpViewModel {
     init(numberFormatter: NumberFormatter, eventPublisher: PassthroughSubject<AvailablePickUpEvent, Never>) {
         self.numberFormatter = numberFormatter
         self.availablePickUpEventPublisher = eventPublisher
+        
+        Task {
+            await fetchRide()
+        }
     }
     
     func navigateDetail(cellViewModel: AvailablePickUpCellViewModel) {

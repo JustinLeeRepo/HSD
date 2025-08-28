@@ -12,40 +12,32 @@ struct AvailablePickUpCellView: View {
     var body: some View {
         HStack {
             VStack(alignment: .leading) {
-                Text("Estimated Earnings: \(viewModel.estimatedEarnings)")
+                if let startAddress = viewModel.startAddress {
+                    HStack {
+                        Text("🟢")
+                        Text("\(startAddress)")
+                            .multilineTextAlignment(.leading)
+                    }
+                }
                 
-                Text("Score: \(viewModel.score)")
+                if let endAddress = viewModel.endAddress {
+                    HStack {
+                        Text("🛑")
+                        Text("\(endAddress)")
+                            .multilineTextAlignment(.leading)
+                    }
+                }
             }
-            .padding(.leading)
             
             Spacer()
             
             VStack(alignment: .leading) {
-                if let startAddress = viewModel.startAddress {
-                    Text("Pick Up: \(startAddress)")
-                }
+                Text("\(viewModel.estimatedEarnings)")
                 
-                if let endAddress = viewModel.endAddress {
-                    Text("Drop Off: \(endAddress)")
-                }
+                Text("Score: \(viewModel.score)")
             }
-            .padding(.trailing)
         }
-        .overlay {
-            RoundedRectangle(cornerRadius: 16)
-                .stroke(
-                    Color(.label)
-                        .opacity(0.1),
-                    lineWidth: 1
-                )
-                .shadow(
-                    color:
-                        Color(.label),
-                    radius: 2.0,
-                    x: 0,
-                    y: 0
-                )
-        }
+        .padding()
     }
 }
 

@@ -13,6 +13,12 @@ struct AuthorizedCoordinatorView: View {
     
     var body: some View {
         TabView(selection: $coordinator.tab) {
+            AvailablePickUpCoordinatorView(coordinator: coordinator.availablePickUpCoordinator)
+            .tabItem {
+                generateLabel(title: "Available Rides", image: "dog")
+            }
+            .tag(Tab.first)
+            
             Button {
                 Task {
                     await coordinator.signOut()
@@ -21,27 +27,9 @@ struct AuthorizedCoordinatorView: View {
                 Text("sign out")
             }
             .tabItem {
-                generateLabel(title: "One", image: "dog")
+                generateLabel(title: "Account", image: "cat")
             }
-            .tag(Tab.first)
-            
-            AvailablePickUpCoordinatorView(coordinator: coordinator.availablePickUpCoordinator)
-                .tabItem {
-                    generateLabel(title: "Two", image: "cat")
-                }
-                .tag(Tab.second)
-            
-            Text("3")
-                .tabItem {
-                    generateLabel(title: "Three", image: "skateboard")
-                }
-                .tag(Tab.third)
-            
-            Text("4")
-                .tabItem {
-                    generateLabel(title: "Four", image: "person")
-                }
-                .tag(Tab.fourth)
+            .tag(Tab.second)
         }
         
         if let error = coordinator.error {
