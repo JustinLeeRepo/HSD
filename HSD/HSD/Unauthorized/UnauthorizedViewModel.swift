@@ -41,6 +41,9 @@ import SwiftUI
         }
         catch {
             Task { @MainActor in
+                withAnimation {
+                    self.isLoading = false
+                }
                 self.error = error
             }
         }

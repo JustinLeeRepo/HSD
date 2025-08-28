@@ -12,30 +12,37 @@ struct AvailablePickUpView: View {
     var viewModel: AvailablePickUpViewModel
     
     var body: some View {
-        ScrollView {
-            LazyVStack(spacing: 12) {
-                ForEach(viewModel.cellViewModels) { cellViewModel in
-                    Button {
-                        viewModel.navigateDetail(cellViewModel: cellViewModel)
-                    } label: {
-                        AvailablePickUpCellView(viewModel: cellViewModel)
-                            .overlay {
-                                RoundedRectangle(cornerRadius: 16)
-                                    .stroke(Color(.label).opacity(0.1), lineWidth: 1)
-                                    .shadow(color: Color(.label), radius: 2.0, x: 0, y: 0)
-                            }
-                            .padding(.horizontal)
+        VStack {
+            ScrollView {
+                LazyVStack(spacing: 12) {
+                    ForEach(viewModel.cellViewModels) { cellViewModel in
+                        Button {
+                            viewModel.navigateDetail(cellViewModel: cellViewModel)
+                        } label: {
+                            AvailablePickUpCellView(viewModel: cellViewModel)
+                                .overlay {
+                                    RoundedRectangle(cornerRadius: 16)
+                                        .stroke(Color(.label).opacity(0.1), lineWidth: 1)
+                                        .shadow(color: Color(.label), radius: 2.0, x: 0, y: 0)
+                                }
+                                .padding(.horizontal)
+                        }
                     }
                 }
             }
+            
+            if let error = viewModel.error {
+                Text(error.localizedDescription)
+                    .padding()
+                    .font(.caption)
+                    .foregroundStyle(.pink)
+                    .opacity(viewModel.error == nil ? 0 : 1)
+            }
         }
-        
-        if let error = viewModel.error {
-            Text(error.localizedDescription)
-                .padding()
-                .font(.caption)
-                .foregroundStyle(.pink)
-                .opacity(viewModel.error == nil ? 0 : 1)
+        .overlay {
+            if viewModel.isLoading {
+                ProgressView()
+            }
         }
     }
 }

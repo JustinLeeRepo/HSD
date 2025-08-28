@@ -12,30 +12,36 @@ struct UnauthorizedView: View {
     var viewModel: UnauthorizedViewModel
     
     var body: some View {
-        
-        Button {
-            viewModel.proceedToSignIn()
-        } label: {
-            Label("Sign in", systemImage: "at")
-            
-        }
-        .inputStyling()
-        
-        Button {
-            Task {
-                await viewModel.expressSignIn()
+        VStack {
+            Button {
+                viewModel.proceedToSignIn()
+            } label: {
+                Label("Sign in", systemImage: "at")
+                
             }
-        } label: {
-            Label("Guest", systemImage: "person.slash")
+            .inputStyling()
+            
+            Button {
+                Task {
+                    await viewModel.expressSignIn()
+                }
+            } label: {
+                Label("Guest", systemImage: "person.slash")
+            }
+            .inputStyling()
+            
+            if let error = viewModel.error {
+                Text(error.localizedDescription)
+                    .padding()
+                    .font(.caption)
+                    .foregroundStyle(.pink)
+                    .opacity(viewModel.error == nil ? 0 : 1)
+            }
         }
-        .inputStyling()
-        
-        if let error = viewModel.error {
-            Text(error.localizedDescription)
-                .padding()
-                .font(.caption)
-                .foregroundStyle(.pink)
-                .opacity(viewModel.error == nil ? 0 : 1)
+        .overlay {
+            if viewModel.isLoading {
+                ProgressView()
+            }
         }
     }
 }

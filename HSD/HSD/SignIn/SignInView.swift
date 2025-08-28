@@ -34,6 +34,11 @@ struct SignInView: View {
                     .opacity(viewModel.error == nil ? 0 : 1)
             }
         }
+        .overlay {
+            if viewModel.isLoading {
+                ProgressView()
+            }
+        }
         .onDisappear {
             viewModel.clearUsername()
         }

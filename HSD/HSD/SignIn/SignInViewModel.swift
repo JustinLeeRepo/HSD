@@ -11,6 +11,7 @@ import SwiftUI
 class SignInViewModel {
     var model: SignInModel
     var error: Error?
+    var isLoading = false
     
     private let authService = AuthService.shared
     
@@ -67,16 +68,21 @@ class SignInViewModel {
     func proceed(dismiss: @escaping () -> Void = {} ) {
         Task {
             do {
+                Task { @MainActor in
+                    self.isLoading = true
+                }
                 // TODO: create auth service and sign in api
                 try await authService.signIn(username: usernameText, password: passwordText)
                 
                 dismiss()
                 Task { @MainActor in
+                    self.isLoading = false
                     self.error = nil
                 }
             }
             catch {
                 Task { @MainActor in
+                    self.isLoading = false
                     self.error = error
                 }
             }

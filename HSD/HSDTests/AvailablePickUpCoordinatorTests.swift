@@ -188,37 +188,6 @@ final class AvailablePickUpCoordinatorTests: XCTestCase {
         wait(for: [expectation], timeout: 1.0)
     }
     
-    // MARK: - Integration Tests
-    
-//    func testCoordinatorAndEventPublisher_ShouldWorkTogether() {
-//        // Given
-//        let expectation = XCTestExpectation(description: "Coordinator should handle events from publisher")
-//        let detailViewModel = AvailablePickUpDetailViewModel(
-//            formatter: mockNumberFormatter,
-//            ride: mockRide
-//        )
-//        let event = AvailablePickUpEvent.proceedToDetail(detailViewModel)
-//        
-//        // When
-//        mockEventPublisher.send(event)
-//        
-//        // Then
-//        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-//            XCTAssertFalse(self.sut.path.isEmpty)
-//            
-//            // Verify the correct view model was added
-//            if let addedViewModel = self.sut.path.first as? AvailablePickUpDetailViewModel {
-//                XCTAssertEqual(addedViewModel.ride.id, self.mockRide.id)
-//            } else {
-//                XCTFail("Expected AvailablePickUpDetailViewModel in path")
-//            }
-//            
-//            expectation.fulfill()
-//        }
-//        
-//        wait(for: [expectation], timeout: 1.0)
-//    }
-    
     // MARK: - Observable Behavior Tests
     
     func testPath_ShouldBeObservableWhenTriggeredViaPublisher() {

@@ -13,6 +13,7 @@ import SwiftUI
 class AvailablePickUpViewModel {
     var cellViewModels: [AvailablePickUpCellViewModel] = []
     var error: Error?
+    var isLoading = false
     
     private let availableRideService: AvailableRidesServiceProtocol
     private let numberFormatter: NumberFormatter
@@ -38,6 +39,10 @@ class AvailablePickUpViewModel {
     
     func fetchRide() async {
         do {
+            Task { @MainActor in
+                isLoading = true
+            }
+            
             let rides = try await availableRideService.fetchRides()
             let viewModels = rides
                 .sorted { $0.score > $1.score } //!!! NOT PRE SORTED
@@ -45,11 +50,13 @@ class AvailablePickUpViewModel {
             
             Task { @MainActor in
                 self.cellViewModels.append(contentsOf: viewModels)
+                isLoading = false
             }
         }
         catch {
             print("error \(error)")
             Task { @MainActor in
+                isLoading = false
                 self.error = error
             }
         }
