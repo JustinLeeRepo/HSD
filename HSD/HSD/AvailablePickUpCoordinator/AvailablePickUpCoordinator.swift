@@ -19,16 +19,14 @@ class AvailablePickUpCoordinator {
     let availablePickUpViewModel: AvailablePickUpViewModel
     private let numberFormatter: NumberFormatter
 
-    private let availablePickUpEventPublisher: PassthroughSubject<AvailablePickUpEvent, Never>
+    internal let availablePickUpEventPublisher: PassthroughSubject<AvailablePickUpEvent, Never>
     private var cancellables = Set<AnyCancellable>()
     
-    init() {
+    init(eventPublisher: PassthroughSubject<AvailablePickUpEvent, Never>? = nil) {
+        let eventPublisher = eventPublisher ?? PassthroughSubject<AvailablePickUpEvent, Never>()
         numberFormatter = NumberFormatter()
         numberFormatter.numberStyle = .currency
         numberFormatter.locale = Locale(identifier: "en_US")
-        
-        
-        let eventPublisher = PassthroughSubject<AvailablePickUpEvent, Never>()
         
         self.availablePickUpEventPublisher = eventPublisher
         availablePickUpViewModel = AvailablePickUpViewModel(numberFormatter: numberFormatter, eventPublisher: eventPublisher)

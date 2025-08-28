@@ -25,8 +25,7 @@ final class RouteViewModelTests: XCTestCase {
         startTime = calendar.date(from: DateComponents(year: 2024, month: 3, day: 15, hour: 9, minute: 30))!
         endTime = calendar.date(from: DateComponents(year: 2024, month: 3, day: 15, hour: 10, minute: 15))!
         
-        // Setup mock polyline (simplified)
-        mockPolyline = "mockPolylineString"
+        mockPolyline = "eiqnEhgvpU|A{UNcD@o@wlA[WKaL[iAYgCoA{@]YQeEkA`AuFu@SCM\\sBYKCGGJI?"
         //
         
         // Setup mock waypoints
@@ -47,13 +46,13 @@ final class RouteViewModelTests: XCTestCase {
     private func setupMockWaypoints() {
         let pickupWaypoint = Waypoint(
             id: 1,
-            location: Location(address: "123 Pickup St", lat: 37.7749, lng: -122.4194),
+            location: Location(address: "East 41st Street, Los Angeles", lat: 34.0089813, lng: -118.2476647),
             waypointType: .pickUp
         )
         
         let dropoffWaypoint = Waypoint(
             id: 2,
-            location: Location(address: "456 Dropoff Ave", lat: 37.7849, lng: -122.4094),
+            location: Location(address: "Alameda Street, Los Angeles", lat: 34.0252756, lng: -118.2395896),
             waypointType: .dropOff
         )
         
@@ -114,7 +113,7 @@ final class RouteViewModelTests: XCTestCase {
     
     func testInitialization_WithSingleWaypoint() {
         // Given
-        let singleWaypoint = [createWaypoint(id: 1, address: "Solo Point", lat: 37.7749, lng: -122.4194, type: .pickUp)]
+        let singleWaypoint = [createWaypoint(id: 1, address: "Solo Point", lat: 34.0089813, lng: -118.2476647, type: .pickUp)]
         
         // When
         createSUT(waypoints: singleWaypoint)
@@ -211,12 +210,12 @@ final class RouteViewModelTests: XCTestCase {
         // Then
         if let region = sut.position.region {
             // Verify center is between pickup and dropoff
-            XCTAssertEqual(region.center.latitude, (37.7749 + 37.7849) / 2, accuracy: 0.0001)
-            XCTAssertEqual(region.center.longitude, (-122.4194 + -122.4094) / 2, accuracy: 0.0001)
+            XCTAssertEqual(region.center.latitude, (34.0089813 + 34.0252756) / 2, accuracy: 0.0001)
+            XCTAssertEqual(region.center.longitude, (-118.2476647 + -118.2395896) / 2, accuracy: 0.0001)
             
             // Verify span includes both points with padding
-            XCTAssertGreaterThan(region.span.latitudeDelta, abs(37.7749 - 37.7849))
-            XCTAssertGreaterThan(region.span.longitudeDelta, abs(-122.4194 - -122.4094))
+            XCTAssertGreaterThan(region.span.latitudeDelta, abs(34.0089813 - 34.0252756))
+            XCTAssertGreaterThan(region.span.longitudeDelta, abs(-118.2476647 - -118.2395896))
         } else {
             XCTFail("Expected region position, got \(sut.position)")
         }
@@ -224,7 +223,7 @@ final class RouteViewModelTests: XCTestCase {
     
     func testCameraPosition_WithoutPickupWaypoint() {
         // Given
-        let waypointsWithoutPickup = [createWaypoint(id: 1, address: "Only Dropoff", lat: 37.7749, lng: -122.4194, type: .dropOff)]
+        let waypointsWithoutPickup = [createWaypoint(id: 1, address: "Only Dropoff", lat: 34.0089813, lng: -118.2476647, type: .dropOff)]
         
         // When
         createSUT(waypoints: waypointsWithoutPickup)
@@ -239,7 +238,7 @@ final class RouteViewModelTests: XCTestCase {
     
     func testCameraPosition_WithoutDropoffWaypoint() {
         // Given
-        let waypointsWithoutDropoff = [createWaypoint(id: 1, address: "Only Pickup", lat: 37.7749, lng: -122.4194, type: .pickUp)]
+        let waypointsWithoutDropoff = [createWaypoint(id: 1, address: "Only Pickup", lat: 34.0089813, lng: -118.2476647, type: .pickUp)]
         
         // When
         createSUT(waypoints: waypointsWithoutDropoff)
@@ -267,7 +266,7 @@ final class RouteViewModelTests: XCTestCase {
     func testCameraPosition_WithVeryCloseWaypoints() {
         // Given - waypoints very close together
         let closeWaypoints = [
-            createWaypoint(id: 1, address: "Close Pickup", lat: 37.7749, lng: -122.4194, type: .pickUp),
+            createWaypoint(id: 1, address: "Close Pickup", lat: 34.0089813, lng: -118.2476647, type: .pickUp),
             createWaypoint(id: 2, address: "Close Dropoff", lat: 37.7750, lng: -122.4195, type: .dropOff)
         ]
         
@@ -287,7 +286,7 @@ final class RouteViewModelTests: XCTestCase {
     func testCameraPosition_WithDistantWaypoints() {
         // Given - waypoints far apart
         let distantWaypoints = [
-            createWaypoint(id: 1, address: "SF Pickup", lat: 37.7749, lng: -122.4194, type: .pickUp),
+            createWaypoint(id: 1, address: "SF Pickup", lat: 34.0089813, lng: -118.2476647, type: .pickUp),
             createWaypoint(id: 2, address: "LA Dropoff", lat: 34.0522, lng: -118.2437, type: .dropOff)
         ]
         
@@ -315,6 +314,19 @@ final class RouteViewModelTests: XCTestCase {
         
         // Then
         XCTAssertNotNil(coordinates)
+        
+        // A small tolerance for comparing floating-point coordinates
+        let tolerance = 0.0005
+
+        // The assertion checks if mockWaypoints contains ANY waypoint
+        // whose location can be found within the coordinates array.
+        XCTAssertTrue(mockWaypoints.contains { waypoint in
+            coordinates.contains { coordinate in
+                // Compare latitude and longitude within the tolerance
+                abs(coordinate.latitude - waypoint.location.lat) < tolerance &&
+                abs(coordinate.longitude - waypoint.location.lng) < tolerance
+            }
+        }, "The coordinates array should contain at least one of the mock waypoint locations.")
         // assert polylinecoordinates have start and end coordinates of waypoint
     }
     
@@ -401,9 +413,9 @@ final class RouteViewModelTests: XCTestCase {
     func testMultipleWaypointsOfSameType() {
         // Given - Multiple pickup waypoints (edge case)
         let multiplePickups = [
-            createWaypoint(id: 1, address: "Pickup 1", lat: 37.7749, lng: -122.4194, type: .pickUp),
+            createWaypoint(id: 1, address: "Pickup 1", lat: 34.0089813, lng: -118.2476647, type: .pickUp),
             createWaypoint(id: 2, address: "Pickup 2", lat: 37.7750, lng: -122.4195, type: .pickUp),
-            createWaypoint(id: 3, address: "Dropoff", lat: 37.7849, lng: -122.4094, type: .dropOff)
+            createWaypoint(id: 3, address: "Dropoff", lat: 34.0252756, lng: -118.2395896, type: .dropOff)
         ]
         
         // When
