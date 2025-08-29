@@ -32,3 +32,14 @@ This codebase follows a MVVM pattern and can be seen from how the UI components 
 There is a service layer that has a concrete client, and then service abstractions that are mockable/stubbable and injectable for testing purposes.
 
 There is some unneccessary components such as auth / auth sercurity in this project but were included to demonstrate a better picture of how a full functioning app would look.
+
+Pagination is not integrated as there is no other pages to fetch other than the mock response.
+The service abstraction is implemented but not integrated.
+To intergate into the app layer, the `availablePickUpList` group's view component (`AvailablePickUpView.swift`) would add a conditional view based on the viewModel wrapping the service's `page` variable. In the case there are no more pages to be fetched, the variable will be nil. Otherwise, it will be initalized to 0 or to response's pagination `nextPage` field.
+That conditional view would have a viewModifier, `onAppear { ... }` that would tell the viewModifier to `fetchPage()`.
+The conditional view would also either be a loading indicator in the case the previously mentioned `page` variable is not nil, or it would be an emptyView in the case it is nil.
+To ensure the `fetchPage` is called only once, we would guard it with a state flag, `isFetching` and upon fetch completion / list append (-ation?) update the `isFetching` var.
+
+
+
+
