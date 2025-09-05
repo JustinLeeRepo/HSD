@@ -54,8 +54,8 @@ struct AuthEndpoint: APIEndpoint {
     }
 }
 
-class AuthService: AuthServiceProtocol {
-    static let shared = AuthService()
+public class AuthService: AuthServiceProtocol {
+    public static let shared = AuthService()
     private let networkService: NetworkServiceProtocol
     private let userState: CurrentUser = .shared
     
@@ -63,11 +63,11 @@ class AuthService: AuthServiceProtocol {
         self.networkService = networkService
     }
     
-    func signIn(username: String, password: String) async throws {
+    public func signIn(username: String, password: String) async throws {
         throw ServiceError.unauthorized
     }
     
-    func expressSignIn() async throws {
+    public func expressSignIn() async throws {
         let token = "Mila"
         try Keychain.shared.update(id: .authToken, stringData: token)
         let user = User(token: token)
@@ -76,7 +76,7 @@ class AuthService: AuthServiceProtocol {
         }
     }
     
-    func signOut() async throws {
+    public func signOut() async throws {
         guard let user = userState.user else { return }
         try Keychain.shared.delete(id: .authToken)
         

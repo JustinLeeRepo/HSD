@@ -7,6 +7,7 @@
 
 import Combine
 import Foundation
+import NetworkService
 
 @Observable class AuthorizedCoordinator {
     enum Tab: UInt {

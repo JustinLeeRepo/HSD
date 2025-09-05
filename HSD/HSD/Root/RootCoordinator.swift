@@ -6,6 +6,7 @@
 //
 
 import Combine
+import NetworkService
 import SwiftUI
 
 @Observable class RootCoordinator {

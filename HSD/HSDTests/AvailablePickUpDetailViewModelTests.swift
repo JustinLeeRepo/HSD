@@ -7,6 +7,7 @@
 
 import XCTest
 import Foundation
+import NetworkService
 @testable import HSD
 
 final class AvailablePickUpDetailViewModelTests: XCTestCase {
