@@ -5,6 +5,7 @@
 //  Created by Justin Lee on 8/26/25.
 //
 
+import Combine
 import Foundation
 import Keychain
 
@@ -17,8 +18,12 @@ public struct User {
 public class CurrentUser: ObservableObject {
     public static let shared = CurrentUser()
     
-    @Published public var user: User?
+    @Published private(set) var user: User?
     @Published private(set) var isSignedIn: Bool = false
+    
+    public var userPublisher: AnyPublisher<User?, Never> {
+        return $user.eraseToAnyPublisher()
+    }
     
     private init() {
         initUser()

@@ -25,7 +25,7 @@ import SwiftUI
     
     private func setupListener() {
         //withObservationTracking only gets callback on first change
-        currentUser.$user
+        currentUser.userPublisher
             .sink { [weak self] user in
                 guard let self = self else { return }
                 self.isAuthorized = user != nil
