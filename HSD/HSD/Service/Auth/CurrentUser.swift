@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Keychain
 
 struct User {
     var token: String

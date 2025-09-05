@@ -1,9 +1,5 @@
-//
-//  Keychain.swift
-//  HSD
-//
-//  Created by Justin Lee on 8/26/25.
-//
+// The Swift Programming Language
+// https://docs.swift.org/swift-book
 
 import Foundation
 
@@ -35,16 +31,16 @@ enum KeychainError: Error, LocalizedError {
 }
 
 // TODO: use protocol containing service: String?, accessGroup: String?
-class Keychain {
-    static var shared = Keychain()
+public class Keychain {
+    public static var shared = Keychain()
     
     private init() {}
 
-    enum KeychainIdentifier: String {
+    public enum KeychainIdentifier: String {
         case authToken = "JustinLee.HSD.keys.authToken"
     }
 
-    func update(id: KeychainIdentifier, stringData: String) throws {
+    public func update(id: KeychainIdentifier, stringData: String) throws {
         guard let data = stringData.data(using: .utf8) else {
             throw KeychainError.invalidData
         }
@@ -72,7 +68,7 @@ class Keychain {
         }
     }
 
-    func get(id: KeychainIdentifier) throws -> String {
+    public func get(id: KeychainIdentifier) throws -> String {
 
         guard let data = try? data(id: id) else {
             throw KeychainError.itemNotFound
@@ -109,7 +105,7 @@ class Keychain {
         return resultData
     }
 
-    func delete(id: KeychainIdentifier) throws {
+    public func delete(id: KeychainIdentifier) throws {
         var query: [String: Any] = [:]
         query[kSecClass as String] = kSecClassGenericPassword
         query[kSecAttrService as String] = id.rawValue

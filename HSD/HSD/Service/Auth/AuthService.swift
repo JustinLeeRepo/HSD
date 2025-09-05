@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Keychain
 
 protocol AuthServiceProtocol {
     func signIn(username: String, password: String) async throws
