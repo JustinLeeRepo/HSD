@@ -13,6 +13,7 @@
 		366030322E608BA400290469 /* AvailablePickUpCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366030312E608BA400290469 /* AvailablePickUpCoordinatorTests.swift */; };
 		366030422E6B73E200290469 /* Keychain in Frameworks */ = {isa = PBXBuildFile; productRef = 366030412E6B73E200290469 /* Keychain */; };
 		366030472E6B8BA000290469 /* NetworkService in Frameworks */ = {isa = PBXBuildFile; productRef = 366030462E6B8BA000290469 /* NetworkService */; };
+		3660304A2E6CD41300290469 /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366030492E6CD41300290469 /* DependencyContainer.swift */; };
 		3684DA0B2E5D089000A20ECE /* HSDApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3684DA0A2E5D089000A20ECE /* HSDApp.swift */; };
 		3684DA0F2E5D089200A20ECE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3684DA0E2E5D089200A20ECE /* Assets.xcassets */; };
 		3684DA122E5D089200A20ECE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3684DA112E5D089200A20ECE /* Preview Assets.xcassets */; };
@@ -67,6 +68,7 @@
 		366030312E608BA400290469 /* AvailablePickUpCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailablePickUpCoordinatorTests.swift; sourceTree = "<group>"; };
 		3660303F2E6B73CF00290469 /* Keychain */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Keychain; path = ../Keychain; sourceTree = "<group>"; };
 		366030432E6B7C0A00290469 /* NetworkService */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = NetworkService; path = ../NetworkService; sourceTree = "<group>"; };
+		366030492E6CD41300290469 /* DependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
 		3684DA072E5D089000A20ECE /* HSD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HSD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3684DA0A2E5D089000A20ECE /* HSDApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HSDApp.swift; sourceTree = "<group>"; };
 		3684DA0E2E5D089200A20ECE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -134,6 +136,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		366030482E6CD40000290469 /* DependencyContainer */ = {
+			isa = PBXGroup;
+			children = (
+				366030492E6CD41300290469 /* DependencyContainer.swift */,
+			);
+			path = DependencyContainer;
+			sourceTree = "<group>";
+		};
 		3684D9FE2E5D089000A20ECE = {
 			isa = PBXGroup;
 			children = (
@@ -160,6 +170,7 @@
 		3684DA092E5D089000A20ECE /* HSD */ = {
 			isa = PBXGroup;
 			children = (
+				366030482E6CD40000290469 /* DependencyContainer */,
 				3684DA0A2E5D089000A20ECE /* HSDApp.swift */,
 				3684DA342E5D0D0F00A20ECE /* Root */,
 				3684DA3E2E5D169900A20ECE /* UnauthorizedCoordinator */,
@@ -462,6 +473,7 @@
 				3684DA802E5F40B400A20ECE /* AvailablePickUpDetailViewModel.swift in Sources */,
 				3684DA422E5D16C000A20ECE /* UnauthorizedCoordinatorView.swift in Sources */,
 				3684DA7E2E5F40A700A20ECE /* AvailablePickUpDetailView.swift in Sources */,
+				3660304A2E6CD41300290469 /* DependencyContainer.swift in Sources */,
 				3684DA872E5FA11C00A20ECE /* String+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

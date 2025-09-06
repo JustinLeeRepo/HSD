@@ -22,14 +22,16 @@ import NetworkService
     
     let availablePickUpCoordinator: AvailablePickUpCoordinator
     private var cancellables = Set<AnyCancellable>()
+    private let authService: AuthServiceProtocol
     
-    init() {
-        self.availablePickUpCoordinator = AvailablePickUpCoordinator()
+    init(dependencyContainer: DependencyContainer) {
+        self.availablePickUpCoordinator = AvailablePickUpCoordinator(dependencyContainer: dependencyContainer)
+        self.authService = dependencyContainer.makeAuthService()
     }
     
     func signOut() async {
         do {
-            try await AuthService.shared.signOut()
+            try await authService.signOut()
         }
         catch {
             Task { @MainActor in

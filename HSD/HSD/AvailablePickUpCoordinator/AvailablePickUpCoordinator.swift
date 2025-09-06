@@ -6,6 +6,7 @@
 //
 
 import Combine
+import NetworkService
 import SwiftUI
 
 enum AvailablePickUpEvent {
@@ -22,14 +23,14 @@ class AvailablePickUpCoordinator {
     internal let availablePickUpEventPublisher: PassthroughSubject<AvailablePickUpEvent, Never>
     private var cancellables = Set<AnyCancellable>()
     
-    init(eventPublisher: PassthroughSubject<AvailablePickUpEvent, Never>? = nil) {
+    init(dependencyContainer: DependencyContainer, eventPublisher: PassthroughSubject<AvailablePickUpEvent, Never>? = nil) {
         let eventPublisher = eventPublisher ?? PassthroughSubject<AvailablePickUpEvent, Never>()
         numberFormatter = NumberFormatter()
         numberFormatter.numberStyle = .currency
         numberFormatter.locale = Locale(identifier: "en_US")
         
-        self.availablePickUpEventPublisher = eventPublisher
-        availablePickUpViewModel = AvailablePickUpViewModel(numberFormatter: numberFormatter, eventPublisher: eventPublisher)
+        availablePickUpEventPublisher = eventPublisher
+        availablePickUpViewModel = AvailablePickUpViewModel(numberFormatter: numberFormatter, eventPublisher: eventPublisher, availableRideService: dependencyContainer.makeAvailableRideService())
         
         setupListener()
     }

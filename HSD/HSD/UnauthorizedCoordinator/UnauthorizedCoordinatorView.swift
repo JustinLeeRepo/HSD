@@ -21,6 +21,7 @@ struct UnauthorizedCoordinatorView: View {
 }
 
 #Preview {
-    let coordinator = UnauthorizedCoordinator()
+    let dependencyContainer = DependencyContainer()
+    let coordinator = UnauthorizedCoordinator(dependencyContainer: dependencyContainer)
     return UnauthorizedCoordinatorView(coordinator: coordinator)
 }

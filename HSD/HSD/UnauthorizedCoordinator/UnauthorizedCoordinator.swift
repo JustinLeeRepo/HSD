@@ -6,6 +6,7 @@
 //
 
 import Combine
+import NetworkService
 import SwiftUI
 
 enum UnauthorizedEvent {
@@ -20,12 +21,14 @@ class UnauthorizedCoordinator {
     
     private let unauthorizedEventPublisher: PassthroughSubject<UnauthorizedEvent, Never>
     private var cancellables = Set<AnyCancellable>()
+    private let dependencyContainer: DependencyContainer
     
-    init() {
+    init(dependencyContainer: DependencyContainer) {
         let unauthorizedEventPublisher = PassthroughSubject<UnauthorizedEvent, Never>()
         
         self.unauthorizedEventPublisher = unauthorizedEventPublisher
-        self.unauthorizedViewModel = UnauthorizedViewModel(unauthorizedEventPublisher: unauthorizedEventPublisher)
+        self.unauthorizedViewModel = UnauthorizedViewModel( unauthorizedEventPublisher: unauthorizedEventPublisher, authService: dependencyContainer.makeAuthService())
+        self.dependencyContainer = dependencyContainer
         
         setupListener()
     }
@@ -42,7 +45,8 @@ class UnauthorizedCoordinator {
         switch event {
         case .proceedToSignIn:
             let model = SignInModel()
-            path.append(SignInViewModel(model: model))
+            let viewModel = SignInViewModel(model: model, dependencyContainer: dependencyContainer)
+            path.append(viewModel)
             break
         }
     }

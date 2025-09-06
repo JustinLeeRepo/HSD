@@ -8,7 +8,7 @@
 import Foundation
 import Keychain
 
-protocol AuthServiceProtocol {
+public protocol AuthServiceProtocol {
     func signIn(username: String, password: String) async throws
     func expressSignIn() async throws
     func signOut() async throws
@@ -55,12 +55,11 @@ struct AuthEndpoint: APIEndpoint {
 }
 
 public class AuthService: AuthServiceProtocol {
-    public static let shared = AuthService()
     private let networkService: NetworkServiceProtocol
     private let userState: CurrentUser = .shared
     
-    private init(networkService: NetworkServiceProtocol = NetworkService()) {
-        self.networkService = networkService
+    public init(networkService: NetworkServiceProtocol? = nil) {
+        self.networkService = networkService ?? NetworkService()
     }
     
     public func signIn(username: String, password: String) async throws {

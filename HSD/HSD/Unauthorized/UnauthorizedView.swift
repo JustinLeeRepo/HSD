@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Combine
+import NetworkService
 
 struct UnauthorizedView: View {
     var viewModel: UnauthorizedViewModel
@@ -48,6 +49,6 @@ struct UnauthorizedView: View {
 
 #Preview {
     let unauthorizedEventPublisher = PassthroughSubject<UnauthorizedEvent, Never>()
-    let viewModel = UnauthorizedViewModel(unauthorizedEventPublisher: unauthorizedEventPublisher)
+    let viewModel = UnauthorizedViewModel(unauthorizedEventPublisher: unauthorizedEventPublisher, authService: AuthService())
     return UnauthorizedView(viewModel: viewModel)
 }

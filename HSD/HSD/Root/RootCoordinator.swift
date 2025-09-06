@@ -12,14 +12,16 @@ import SwiftUI
 @Observable class RootCoordinator {
     var isAuthorized = false
     
-    let unauthorizedCoordinator = UnauthorizedCoordinator()
+    let unauthorizedCoordinator: UnauthorizedCoordinator
     var authorizedCoordinator: AuthorizedCoordinator?
     
-    private var authService = AuthService.shared
+    private let dependencyContainer: DependencyContainer
     private var currentUser = CurrentUser.shared
     private var cancellables = Set<AnyCancellable>()
     
-    init() {
+    init(dependencyContainer: DependencyContainer) {
+        self.dependencyContainer = dependencyContainer
+        self.unauthorizedCoordinator = UnauthorizedCoordinator(dependencyContainer: dependencyContainer)
         setupListener()
     }
     
@@ -32,7 +34,7 @@ import SwiftUI
                 
                 if let user = user {
                     Task { @MainActor in
-                        self.authorizedCoordinator = AuthorizedCoordinator()
+                        self.authorizedCoordinator = AuthorizedCoordinator(dependencyContainer: self.dependencyContainer)
                     }
                 }
                 else {

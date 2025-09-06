@@ -102,6 +102,6 @@ extension View {
 
 #Preview {
     let model = SignInModel()
-    let viewModel = SignInViewModel(model: model)
+    let viewModel = SignInViewModel(model: model, dependencyContainer: DependencyContainer())
     return SignInView(viewModel: viewModel)
 }

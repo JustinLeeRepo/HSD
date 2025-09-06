@@ -67,15 +67,14 @@ struct AvailableRidesEndpoint: APIEndpoint {
 }
 
 public class AvailableRidesService: AvailableRidesServiceProtocol {
-    public static let shared = AvailableRidesService()
     private let networkService: NetworkServiceProtocol
     private let userState: CurrentUser = .shared
     
     private let defaultPageSize = 20
     private var page: Int? = 0
     
-    private init(networkService: NetworkServiceProtocol = NetworkService()) {
-        self.networkService = networkService
+    public init(networkService: NetworkServiceProtocol? = nil) {
+        self.networkService = networkService ?? NetworkService()
     }
 
     func resetPagination() {
