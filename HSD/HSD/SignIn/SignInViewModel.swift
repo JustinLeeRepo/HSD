@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import NetworkService
 
 @Observable
 class SignInViewModel {
@@ -13,10 +14,11 @@ class SignInViewModel {
     var error: Error?
     var isLoading = false
     
-    private let authService = AuthService.shared
+    private let authService: AuthServiceProtocol
     
-    init(model: SignInModel) {
+    init(model: SignInModel, dependencyContainer: DependencyContainer) {
         self.model = model
+        self.authService = dependencyContainer.makeAuthService()
     }
     
     var isUsernameEmpty: Bool {

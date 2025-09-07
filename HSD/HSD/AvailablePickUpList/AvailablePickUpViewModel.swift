@@ -7,6 +7,7 @@
 
 import Combine
 import Foundation
+import NetworkService
 import SwiftUI
 
 @Observable
@@ -21,7 +22,7 @@ class AvailablePickUpViewModel {
     
     init(numberFormatter: NumberFormatter, 
          eventPublisher: PassthroughSubject<AvailablePickUpEvent, Never>,
-         availableRideService: AvailableRidesServiceProtocol = AvailableRidesService.shared) {
+         availableRideService: AvailableRidesServiceProtocol) {
         self.numberFormatter = numberFormatter
         self.availablePickUpEventPublisher = eventPublisher
         self.availableRideService = availableRideService

@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol AvailableRidesServiceProtocol {
+public protocol AvailableRidesServiceProtocol {
     func fetchRides() async throws -> [Ride]
     func fetchRidesPage(pageSize: Int?) async throws -> [Ride]
 }
@@ -66,16 +66,15 @@ struct AvailableRidesEndpoint: APIEndpoint {
     }
 }
 
-class AvailableRidesService: AvailableRidesServiceProtocol {
-    static let shared = AvailableRidesService()
+public class AvailableRidesService: AvailableRidesServiceProtocol {
     private let networkService: NetworkServiceProtocol
     private let userState: CurrentUser = .shared
     
     private let defaultPageSize = 20
     private var page: Int? = 0
     
-    private init(networkService: NetworkServiceProtocol = NetworkService()) {
-        self.networkService = networkService
+    public init(networkService: NetworkServiceProtocol? = nil) {
+        self.networkService = networkService ?? NetworkService()
     }
 
     func resetPagination() {
@@ -86,7 +85,7 @@ class AvailableRidesService: AvailableRidesServiceProtocol {
         return page
     }
     
-    func fetchRides() async throws -> [Ride] {
+    public func fetchRides() async throws -> [Ride] {
         guard let user = userState.user else { throw ServiceError.unauthorized }
         
         let endpoint = AvailableRidesEndpoint(action: .fetchRides(token: user.token))
@@ -96,7 +95,7 @@ class AvailableRidesService: AvailableRidesServiceProtocol {
         return response.rides
     }
     
-    func fetchRidesPage(pageSize: Int? = nil) async throws -> [Ride] {
+    public func fetchRidesPage(pageSize: Int? = nil) async throws -> [Ride] {
         throw ServiceError.noData
         
         guard let user = userState.user else { throw ServiceError.unauthorized }

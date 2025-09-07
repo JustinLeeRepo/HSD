@@ -5,19 +5,25 @@
 //  Created by Justin Lee on 8/26/25.
 //
 
+import Combine
 import Foundation
+import Keychain
 
-struct User {
+public struct User {
     var token: String
 }
 
 //ObservableObject conformance instead of @Observable annotation
 //because withObservationTracking is unreliable after first callback
-class CurrentUser: ObservableObject {
-    static let shared = CurrentUser()
+public class CurrentUser: ObservableObject {
+    public static let shared = CurrentUser()
     
     @Published private(set) var user: User?
     @Published private(set) var isSignedIn: Bool = false
+    
+    public var userPublisher: AnyPublisher<User?, Never> {
+        return $user.eraseToAnyPublisher()
+    }
     
     private init() {
         initUser()

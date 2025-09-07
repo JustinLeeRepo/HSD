@@ -7,6 +7,7 @@
 
 import Combine
 import Foundation
+import NetworkService
 
 @Observable class AuthorizedCoordinator {
     enum Tab: UInt {
@@ -21,14 +22,16 @@ import Foundation
     
     let availablePickUpCoordinator: AvailablePickUpCoordinator
     private var cancellables = Set<AnyCancellable>()
+    private let authService: AuthServiceProtocol
     
-    init() {
-        self.availablePickUpCoordinator = AvailablePickUpCoordinator()
+    init(dependencyContainer: DependencyContainer) {
+        self.availablePickUpCoordinator = AvailablePickUpCoordinator(dependencyContainer: dependencyContainer)
+        self.authService = dependencyContainer.makeAuthService()
     }
     
     func signOut() async {
         do {
-            try await AuthService.shared.signOut()
+            try await authService.signOut()
         }
         catch {
             Task { @MainActor in

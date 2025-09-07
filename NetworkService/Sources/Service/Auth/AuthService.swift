@@ -6,8 +6,9 @@
 //
 
 import Foundation
+import Keychain
 
-protocol AuthServiceProtocol {
+public protocol AuthServiceProtocol {
     func signIn(username: String, password: String) async throws
     func expressSignIn() async throws
     func signOut() async throws
@@ -53,20 +54,19 @@ struct AuthEndpoint: APIEndpoint {
     }
 }
 
-class AuthService: AuthServiceProtocol {
-    static let shared = AuthService()
+public class AuthService: AuthServiceProtocol {
     private let networkService: NetworkServiceProtocol
     private let userState: CurrentUser = .shared
     
-    private init(networkService: NetworkServiceProtocol = NetworkService()) {
-        self.networkService = networkService
+    public init(networkService: NetworkServiceProtocol? = nil) {
+        self.networkService = networkService ?? NetworkService()
     }
     
-    func signIn(username: String, password: String) async throws {
+    public func signIn(username: String, password: String) async throws {
         throw ServiceError.unauthorized
     }
     
-    func expressSignIn() async throws {
+    public func expressSignIn() async throws {
         let token = "Mila"
         try Keychain.shared.update(id: .authToken, stringData: token)
         let user = User(token: token)
@@ -75,7 +75,7 @@ class AuthService: AuthServiceProtocol {
         }
     }
     
-    func signOut() async throws {
+    public func signOut() async throws {
         guard let user = userState.user else { return }
         try Keychain.shared.delete(id: .authToken)
         

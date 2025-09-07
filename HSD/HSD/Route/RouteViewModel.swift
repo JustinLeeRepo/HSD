@@ -5,8 +5,9 @@
 //  Created by Justin Lee on 8/27/25.
 //
 
-import SwiftUI
 import MapKit
+import NetworkService
+import SwiftUI
 
 @Observable
 class RouteViewModel {

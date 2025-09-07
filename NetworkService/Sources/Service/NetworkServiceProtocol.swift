@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum HTTPMethod: String {
+public enum HTTPMethod: String {
     case GET = "GET"
     case POST = "POST"
     case PUT = "PUT"
@@ -61,12 +61,12 @@ enum ServiceError: Error, LocalizedError, Equatable{
     }
 }
 
-protocol NetworkServiceProtocol {
+public protocol NetworkServiceProtocol {
     func performRequest<T: Codable>(_ endpoint: APIEndpoint) async throws -> T
     func performRequest(_ endpoint: APIEndpoint) async throws
 }
 
-protocol APIEndpoint {
+public protocol APIEndpoint {
     var path: String { get }
     var method: HTTPMethod { get }
     var body: Codable? { get }

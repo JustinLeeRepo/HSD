@@ -21,6 +21,7 @@ struct AvailablePickUpCoordinatorView: View {
 }
 
 #Preview {
-    let coordinator = AvailablePickUpCoordinator()
+    let dependencyContainer = DependencyContainer()
+    let coordinator = AvailablePickUpCoordinator(dependencyContainer: dependencyContainer)
     return AvailablePickUpCoordinatorView(coordinator: coordinator)
 }

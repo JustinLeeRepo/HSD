@@ -7,6 +7,7 @@
 
 import Combine
 import SwiftUI
+import NetworkService
 
 struct AvailablePickUpView: View {
     var viewModel: AvailablePickUpViewModel
@@ -49,6 +50,6 @@ struct AvailablePickUpView: View {
 
 #Preview {
     let eventPublisher = PassthroughSubject<AvailablePickUpEvent, Never>()
-    let viewModel = AvailablePickUpViewModel(numberFormatter: NumberFormatter(), eventPublisher: eventPublisher)
+    let viewModel = AvailablePickUpViewModel(numberFormatter: NumberFormatter(), eventPublisher: eventPublisher, availableRideService: AvailableRidesService())
     return AvailablePickUpView(viewModel: viewModel)
 }

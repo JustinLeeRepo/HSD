@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import NetworkService
 
 @Observable
 class AvailablePickUpCellViewModel {
@@ -30,7 +31,7 @@ class AvailablePickUpCellViewModel {
     }
     
     var score: String {
-        return "\(ride.score)"
+        return ride.scoreString
     }
 }
 

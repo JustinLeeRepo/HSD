@@ -22,6 +22,7 @@ struct RootCoordinatorView: View {
 }
 
 #Preview {
-    let coordinator = RootCoordinator()
+    let dependencyContainer = DependencyContainer()
+    let coordinator = RootCoordinator(dependencyContainer: dependencyContainer)
     return RootCoordinatorView(coordinator: coordinator)
 }

@@ -6,6 +6,7 @@
 //
 
 import Combine
+import NetworkService
 import SwiftUI
 
 @Observable class UnauthorizedViewModel {
@@ -13,10 +14,12 @@ import SwiftUI
     var error: Error?
     
     private let unauthorizedEventPublisher: PassthroughSubject<UnauthorizedEvent, Never>
-    private let authService = AuthService.shared
+    private let authService: AuthServiceProtocol
     
-    init(unauthorizedEventPublisher: PassthroughSubject<UnauthorizedEvent, Never>) {
+    init(unauthorizedEventPublisher: PassthroughSubject<UnauthorizedEvent, Never>,
+         authService: AuthServiceProtocol) {
         self.unauthorizedEventPublisher = unauthorizedEventPublisher
+        self.authService = authService
     }
     
     func proceedToSignIn() {
