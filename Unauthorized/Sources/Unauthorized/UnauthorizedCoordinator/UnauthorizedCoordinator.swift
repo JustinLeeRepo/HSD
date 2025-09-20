@@ -6,6 +6,7 @@
 //
 
 import Combine
+import DependencyContainer
 import NetworkService
 import SwiftUI
 
@@ -14,7 +15,7 @@ enum UnauthorizedEvent {
 }
 
 @Observable
-class UnauthorizedCoordinator {
+public class UnauthorizedCoordinator {
     var path = NavigationPath()
     
     let unauthorizedViewModel: UnauthorizedViewModel
@@ -23,7 +24,7 @@ class UnauthorizedCoordinator {
     private var cancellables = Set<AnyCancellable>()
     private let dependencyContainer: DependencyContainer
     
-    init(dependencyContainer: DependencyContainer) {
+    public init(dependencyContainer: DependencyContainer) {
         let unauthorizedEventPublisher = PassthroughSubject<UnauthorizedEvent, Never>()
         
         self.unauthorizedEventPublisher = unauthorizedEventPublisher

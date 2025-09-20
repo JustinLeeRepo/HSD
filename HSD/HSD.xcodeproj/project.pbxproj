@@ -13,19 +13,11 @@
 		366030322E608BA400290469 /* AvailablePickUpCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366030312E608BA400290469 /* AvailablePickUpCoordinatorTests.swift */; };
 		366030422E6B73E200290469 /* Keychain in Frameworks */ = {isa = PBXBuildFile; productRef = 366030412E6B73E200290469 /* Keychain */; };
 		366030472E6B8BA000290469 /* NetworkService in Frameworks */ = {isa = PBXBuildFile; productRef = 366030462E6B8BA000290469 /* NetworkService */; };
-		3660304A2E6CD41300290469 /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366030492E6CD41300290469 /* DependencyContainer.swift */; };
 		3684DA0B2E5D089000A20ECE /* HSDApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3684DA0A2E5D089000A20ECE /* HSDApp.swift */; };
 		3684DA0F2E5D089200A20ECE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3684DA0E2E5D089200A20ECE /* Assets.xcassets */; };
 		3684DA122E5D089200A20ECE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3684DA112E5D089200A20ECE /* Preview Assets.xcassets */; };
 		3684DA362E5D0D1F00A20ECE /* RootCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3684DA352E5D0D1F00A20ECE /* RootCoordinator.swift */; };
 		3684DA382E5D0F6600A20ECE /* RootCoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3684DA372E5D0F6600A20ECE /* RootCoordinatorView.swift */; };
-		3684DA3B2E5D155E00A20ECE /* UnauthorizedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3684DA3A2E5D155E00A20ECE /* UnauthorizedViewModel.swift */; };
-		3684DA3D2E5D156800A20ECE /* UnauthorizedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3684DA3C2E5D156800A20ECE /* UnauthorizedView.swift */; };
-		3684DA402E5D16B500A20ECE /* UnauthorizedCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3684DA3F2E5D16B500A20ECE /* UnauthorizedCoordinator.swift */; };
-		3684DA422E5D16C000A20ECE /* UnauthorizedCoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3684DA412E5D16C000A20ECE /* UnauthorizedCoordinatorView.swift */; };
-		3684DA452E5D1BE100A20ECE /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3684DA442E5D1BE100A20ECE /* SignInViewModel.swift */; };
-		3684DA472E5D1BEB00A20ECE /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3684DA462E5D1BEB00A20ECE /* SignInView.swift */; };
-		3684DA4B2E5D21EF00A20ECE /* SignInModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3684DA4A2E5D21EF00A20ECE /* SignInModel.swift */; };
 		3684DA5C2E5E1F2B00A20ECE /* AuthorizedCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3684DA5B2E5E1F2A00A20ECE /* AuthorizedCoordinator.swift */; };
 		3684DA5E2E5E1F3800A20ECE /* AuthorizedCoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3684DA5D2E5E1F3800A20ECE /* AuthorizedCoordinatorView.swift */; };
 		3684DA682E5E677100A20ECE /* AvailablePickUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3684DA672E5E677100A20ECE /* AvailablePickUpViewModel.swift */; };
@@ -40,6 +32,8 @@
 		3684DA852E5F500D00A20ECE /* RouteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3684DA842E5F500D00A20ECE /* RouteViewModel.swift */; };
 		3684DA872E5FA11C00A20ECE /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3684DA862E5FA11C00A20ECE /* String+Extensions.swift */; };
 		3684DA8A2E60153600A20ECE /* AvailablePickUpViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3684DA892E60153600A20ECE /* AvailablePickUpViewModelTests.swift */; };
+		36EA4DAF2E7F5CFD0005FB39 /* Unauthorized in Frameworks */ = {isa = PBXBuildFile; productRef = 36EA4DAE2E7F5CFD0005FB39 /* Unauthorized */; };
+		36EA4DB52E7F60810005FB39 /* DependencyContainer in Frameworks */ = {isa = PBXBuildFile; productRef = 36EA4DB42E7F60810005FB39 /* DependencyContainer */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,7 +60,6 @@
 		366030312E608BA400290469 /* AvailablePickUpCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailablePickUpCoordinatorTests.swift; sourceTree = "<group>"; };
 		3660303F2E6B73CF00290469 /* Keychain */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Keychain; path = ../Keychain; sourceTree = "<group>"; };
 		366030432E6B7C0A00290469 /* NetworkService */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = NetworkService; path = ../NetworkService; sourceTree = "<group>"; };
-		366030492E6CD41300290469 /* DependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
 		3684DA072E5D089000A20ECE /* HSD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HSD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3684DA0A2E5D089000A20ECE /* HSDApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HSDApp.swift; sourceTree = "<group>"; };
 		3684DA0E2E5D089200A20ECE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -75,13 +68,6 @@
 		3684DA212E5D089300A20ECE /* HSDUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HSDUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3684DA352E5D0D1F00A20ECE /* RootCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootCoordinator.swift; sourceTree = "<group>"; };
 		3684DA372E5D0F6600A20ECE /* RootCoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootCoordinatorView.swift; sourceTree = "<group>"; };
-		3684DA3A2E5D155E00A20ECE /* UnauthorizedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnauthorizedViewModel.swift; sourceTree = "<group>"; };
-		3684DA3C2E5D156800A20ECE /* UnauthorizedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnauthorizedView.swift; sourceTree = "<group>"; };
-		3684DA3F2E5D16B500A20ECE /* UnauthorizedCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnauthorizedCoordinator.swift; sourceTree = "<group>"; };
-		3684DA412E5D16C000A20ECE /* UnauthorizedCoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnauthorizedCoordinatorView.swift; sourceTree = "<group>"; };
-		3684DA442E5D1BE100A20ECE /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
-		3684DA462E5D1BEB00A20ECE /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
-		3684DA4A2E5D21EF00A20ECE /* SignInModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInModel.swift; sourceTree = "<group>"; };
 		3684DA5B2E5E1F2A00A20ECE /* AuthorizedCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizedCoordinator.swift; sourceTree = "<group>"; };
 		3684DA5D2E5E1F3800A20ECE /* AuthorizedCoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizedCoordinatorView.swift; sourceTree = "<group>"; };
 		3684DA672E5E677100A20ECE /* AvailablePickUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailablePickUpViewModel.swift; sourceTree = "<group>"; };
@@ -96,6 +82,8 @@
 		3684DA842E5F500D00A20ECE /* RouteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteViewModel.swift; sourceTree = "<group>"; };
 		3684DA862E5FA11C00A20ECE /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		3684DA892E60153600A20ECE /* AvailablePickUpViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailablePickUpViewModelTests.swift; sourceTree = "<group>"; };
+		36EA4DAD2E7F5A5E0005FB39 /* Unauthorized */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Unauthorized; path = ../Unauthorized; sourceTree = "<group>"; };
+		36EA4DB32E7F60060005FB39 /* DependencyContainer */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = DependencyContainer; path = ../DependencyContainer; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +92,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				366030422E6B73E200290469 /* Keychain in Frameworks */,
+				36EA4DB52E7F60810005FB39 /* DependencyContainer in Frameworks */,
+				36EA4DAF2E7F5CFD0005FB39 /* Unauthorized in Frameworks */,
 				366030472E6B8BA000290469 /* NetworkService in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -132,17 +122,11 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		366030482E6CD40000290469 /* DependencyContainer */ = {
-			isa = PBXGroup;
-			children = (
-				366030492E6CD41300290469 /* DependencyContainer.swift */,
-			);
-			path = DependencyContainer;
-			sourceTree = "<group>";
-		};
 		3684D9FE2E5D089000A20ECE = {
 			isa = PBXGroup;
 			children = (
+				36EA4DB32E7F60060005FB39 /* DependencyContainer */,
+				36EA4DAD2E7F5A5E0005FB39 /* Unauthorized */,
 				366030432E6B7C0A00290469 /* NetworkService */,
 				3660303F2E6B73CF00290469 /* Keychain */,
 				3684DA092E5D089000A20ECE /* HSD */,
@@ -165,12 +149,8 @@
 		3684DA092E5D089000A20ECE /* HSD */ = {
 			isa = PBXGroup;
 			children = (
-				366030482E6CD40000290469 /* DependencyContainer */,
 				3684DA0A2E5D089000A20ECE /* HSDApp.swift */,
 				3684DA342E5D0D0F00A20ECE /* Root */,
-				3684DA3E2E5D169900A20ECE /* UnauthorizedCoordinator */,
-				3684DA392E5D153C00A20ECE /* Unauthorized */,
-				3684DA432E5D1BC800A20ECE /* SignIn */,
 				3684DA5A2E5E1F0B00A20ECE /* AuthorizedCoordinator */,
 				3684DA772E5F3F1A00A20ECE /* AvailablePickUpCoordinator */,
 				3684DA662E5E661900A20ECE /* AvailablePickUpList */,
@@ -211,34 +191,6 @@
 				3684DA372E5D0F6600A20ECE /* RootCoordinatorView.swift */,
 			);
 			path = Root;
-			sourceTree = "<group>";
-		};
-		3684DA392E5D153C00A20ECE /* Unauthorized */ = {
-			isa = PBXGroup;
-			children = (
-				3684DA3A2E5D155E00A20ECE /* UnauthorizedViewModel.swift */,
-				3684DA3C2E5D156800A20ECE /* UnauthorizedView.swift */,
-			);
-			path = Unauthorized;
-			sourceTree = "<group>";
-		};
-		3684DA3E2E5D169900A20ECE /* UnauthorizedCoordinator */ = {
-			isa = PBXGroup;
-			children = (
-				3684DA3F2E5D16B500A20ECE /* UnauthorizedCoordinator.swift */,
-				3684DA412E5D16C000A20ECE /* UnauthorizedCoordinatorView.swift */,
-			);
-			path = UnauthorizedCoordinator;
-			sourceTree = "<group>";
-		};
-		3684DA432E5D1BC800A20ECE /* SignIn */ = {
-			isa = PBXGroup;
-			children = (
-				3684DA4A2E5D21EF00A20ECE /* SignInModel.swift */,
-				3684DA442E5D1BE100A20ECE /* SignInViewModel.swift */,
-				3684DA462E5D1BEB00A20ECE /* SignInView.swift */,
-			);
-			path = SignIn;
 			sourceTree = "<group>";
 		};
 		3684DA5A2E5E1F0B00A20ECE /* AuthorizedCoordinator */ = {
@@ -322,6 +274,8 @@
 			packageProductDependencies = (
 				366030412E6B73E200290469 /* Keychain */,
 				366030462E6B8BA000290469 /* NetworkService */,
+				36EA4DAE2E7F5CFD0005FB39 /* Unauthorized */,
+				36EA4DB42E7F60810005FB39 /* DependencyContainer */,
 			);
 			productName = HSD;
 			productReference = 3684DA072E5D089000A20ECE /* HSD.app */;
@@ -395,6 +349,8 @@
 				Base,
 			);
 			mainGroup = 3684D9FE2E5D089000A20ECE;
+			packageReferences = (
+			);
 			productRefGroup = 3684DA082E5D089000A20ECE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -437,29 +393,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3684DA4B2E5D21EF00A20ECE /* SignInModel.swift in Sources */,
 				3684DA5E2E5E1F3800A20ECE /* AuthorizedCoordinatorView.swift in Sources */,
 				3684DA362E5D0D1F00A20ECE /* RootCoordinator.swift in Sources */,
-				3684DA3B2E5D155E00A20ECE /* UnauthorizedViewModel.swift in Sources */,
 				3684DA742E5EDEC800A20ECE /* AvailablePickUpCellViewModel.swift in Sources */,
 				3684DA0B2E5D089000A20ECE /* HSDApp.swift in Sources */,
 				3684DA832E5F500200A20ECE /* RouteView.swift in Sources */,
 				3684DA762E5EDED700A20ECE /* AvailablePickUpCellView.swift in Sources */,
-				3684DA472E5D1BEB00A20ECE /* SignInView.swift in Sources */,
 				3684DA852E5F500D00A20ECE /* RouteViewModel.swift in Sources */,
 				3684DA682E5E677100A20ECE /* AvailablePickUpViewModel.swift in Sources */,
 				3684DA792E5F3F2E00A20ECE /* AvailablePickUpCoordinatorView.swift in Sources */,
-				3684DA3D2E5D156800A20ECE /* UnauthorizedView.swift in Sources */,
-				3684DA452E5D1BE100A20ECE /* SignInViewModel.swift in Sources */,
 				3684DA7B2E5F3F3900A20ECE /* AvailablePickUpCoordinator.swift in Sources */,
-				3684DA402E5D16B500A20ECE /* UnauthorizedCoordinator.swift in Sources */,
 				3684DA6A2E5E677D00A20ECE /* AvailablePickUpView.swift in Sources */,
 				3684DA5C2E5E1F2B00A20ECE /* AuthorizedCoordinator.swift in Sources */,
 				3684DA382E5D0F6600A20ECE /* RootCoordinatorView.swift in Sources */,
 				3684DA802E5F40B400A20ECE /* AvailablePickUpDetailViewModel.swift in Sources */,
-				3684DA422E5D16C000A20ECE /* UnauthorizedCoordinatorView.swift in Sources */,
 				3684DA7E2E5F40A700A20ECE /* AvailablePickUpDetailView.swift in Sources */,
-				3660304A2E6CD41300290469 /* DependencyContainer.swift in Sources */,
 				3684DA872E5FA11C00A20ECE /* String+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -801,6 +749,14 @@
 		366030462E6B8BA000290469 /* NetworkService */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = NetworkService;
+		};
+		36EA4DAE2E7F5CFD0005FB39 /* Unauthorized */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Unauthorized;
+		};
+		36EA4DB42E7F60810005FB39 /* DependencyContainer */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = DependencyContainer;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -6,6 +6,7 @@
 //
 
 import Combine
+import DependencyContainer
 import NetworkService
 import SwiftUI
 

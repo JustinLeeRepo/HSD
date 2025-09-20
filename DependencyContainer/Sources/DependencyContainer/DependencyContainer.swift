@@ -8,20 +8,20 @@
 import Foundation
 import NetworkService
 
-class DependencyContainer {
+public class DependencyContainer {
     private let availableRideService: AvailableRidesServiceProtocol
     private let authService: AuthServiceProtocol
     
-    init() {
+    public init() {
         self.availableRideService = AvailableRidesService()
         self.authService = AuthService()
     }
     
-    func makeAvailableRideService() -> AvailableRidesServiceProtocol {
+    public func makeAvailableRideService() -> AvailableRidesServiceProtocol {
         return availableRideService
     }
     
-    func makeAuthService() -> AuthServiceProtocol {
+    public func makeAuthService() -> AuthServiceProtocol {
         return authService
     }
 }

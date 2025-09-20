@@ -5,6 +5,7 @@
 //  Created by Justin Lee on 8/26/25.
 //
 
+import DependencyContainer
 import SwiftUI
 
 struct AuthorizedCoordinatorView: View {

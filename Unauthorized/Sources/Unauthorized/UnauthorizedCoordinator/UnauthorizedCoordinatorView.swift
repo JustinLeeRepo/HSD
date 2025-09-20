@@ -5,12 +5,17 @@
 //  Created by Justin Lee on 8/25/25.
 //
 
+import DependencyContainer
 import SwiftUI
 
-struct UnauthorizedCoordinatorView: View {
+public struct UnauthorizedCoordinatorView: View {
     @Bindable var coordinator: UnauthorizedCoordinator
     
-    var body: some View {
+    public init(coordinator: UnauthorizedCoordinator) {
+        self.coordinator = coordinator
+    }
+    
+    public var body: some View {
         NavigationStack(path: $coordinator.path) {
             UnauthorizedView(viewModel: coordinator.unauthorizedViewModel)
                 .navigationDestination(for: SignInViewModel.self) { viewModel in
