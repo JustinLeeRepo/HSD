@@ -287,7 +287,7 @@ final class RouteViewModelTests: XCTestCase {
     func testCameraPosition_WithDistantWaypoints() {
         // Given - waypoints far apart
         let distantWaypoints = [
-            createWaypoint(id: 1, address: "SF Pickup", lat: 34.0089813, lng: -118.2476647, type: .pickUp),
+            createWaypoint(id: 1, address: "SF Pickup", lat: 37.774929, lng: -122.419418, type: .pickUp),
             createWaypoint(id: 2, address: "LA Dropoff", lat: 34.0522, lng: -118.2437, type: .dropOff)
         ]
         
