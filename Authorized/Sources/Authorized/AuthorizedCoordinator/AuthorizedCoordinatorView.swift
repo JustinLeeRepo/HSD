@@ -8,11 +8,15 @@
 import DependencyContainer
 import SwiftUI
 
-struct AuthorizedCoordinatorView: View {
+public struct AuthorizedCoordinatorView: View {
     typealias Tab = AuthorizedCoordinator.Tab
     @Bindable var coordinator: AuthorizedCoordinator
     
-    var body: some View {
+    public init(coordinator: AuthorizedCoordinator) {
+        self.coordinator = coordinator
+    }
+    
+    public var body: some View {
         TabView(selection: $coordinator.tab) {
             AvailablePickUpCoordinatorView(coordinator: coordinator.availablePickUpCoordinator)
             .tabItem {

@@ -14,7 +14,7 @@ extension String {
     /// Decodes a polyline string into an array of `CLLocationCoordinate2D` objects.
     ///
     /// - Returns: An array of coordinates representing the polyline's path.
-    func decodePolyline() -> [CLLocationCoordinate2D] {
+    public func decodePolyline() -> [CLLocationCoordinate2D] {
         // Convert the string to a byte array
         let bytes = [UInt8](self.utf8)
         guard !bytes.isEmpty else { return [] }

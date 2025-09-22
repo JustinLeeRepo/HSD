@@ -10,7 +10,8 @@ import DependencyContainer
 import Foundation
 import NetworkService
 
-@Observable class AuthorizedCoordinator {
+@Observable 
+public class AuthorizedCoordinator {
     enum Tab: UInt {
         case first
         case second
@@ -25,7 +26,7 @@ import NetworkService
     private var cancellables = Set<AnyCancellable>()
     private let authService: AuthServiceProtocol
     
-    init(dependencyContainer: DependencyContainer) {
+    public init(dependencyContainer: DependencyContainer) {
         self.availablePickUpCoordinator = AvailablePickUpCoordinator(dependencyContainer: dependencyContainer)
         self.authService = dependencyContainer.makeAuthService()
     }

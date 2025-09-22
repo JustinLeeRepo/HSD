@@ -10,7 +10,7 @@ import SwiftUI
 
 @main
 struct HSDApp: App {
-    private var coordinator = RootCoordinator(dependencyContainer: DependencyContainer())
+    @State private var coordinator = RootCoordinator(dependencyContainer: DependencyContainer())
     
     var body: some Scene {
         WindowGroup {
