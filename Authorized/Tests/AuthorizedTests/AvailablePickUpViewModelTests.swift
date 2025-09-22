@@ -10,7 +10,8 @@ import XCTest
 import XCTest
 import Combine
 import Foundation
-@testable import HSD
+@testable import Authorized
+@testable import NetworkService
 
 @MainActor
 final class AvailablePickUpViewModelTests: XCTestCase {

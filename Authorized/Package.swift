@@ -30,5 +30,9 @@ let package = Package(
                 "SharedUtilities"
             ]
         ),
+        .testTarget(
+            name: "AuthorizedTests",
+            dependencies: ["Authorized"]
+        )
     ]
 )

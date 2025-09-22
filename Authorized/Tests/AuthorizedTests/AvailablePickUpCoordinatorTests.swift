@@ -8,7 +8,9 @@
 import XCTest
 import Combine
 import SwiftUI
-@testable import HSD
+@testable import Authorized
+@testable import NetworkService
+@testable import DependencyContainer
 
 final class AvailablePickUpCoordinatorTests: XCTestCase {
     
@@ -17,6 +19,7 @@ final class AvailablePickUpCoordinatorTests: XCTestCase {
     var cancellables: Set<AnyCancellable>!
     var mockNumberFormatter: NumberFormatter!
     var mockRide: Ride!
+    var mockDepdencyContainer: MockDependencyContainer!
     
     override func setUp() {
         super.setUp()
@@ -26,9 +29,10 @@ final class AvailablePickUpCoordinatorTests: XCTestCase {
         
         mockRide = createMockRide()
         mockEventPublisher = PassthroughSubject<AvailablePickUpEvent, Never>()
+        mockDepdencyContainer = MockDependencyContainer()
         
         // Create coordinator with mocked dependencies
-        sut = AvailablePickUpCoordinator(eventPublisher: mockEventPublisher)
+        sut = AvailablePickUpCoordinator(dependencyContainer: mockDepdencyContainer, eventPublisher: mockEventPublisher)
         
         cancellables = Set<AnyCancellable>()
     }
@@ -46,7 +50,7 @@ final class AvailablePickUpCoordinatorTests: XCTestCase {
     
     func testInit_ShouldInitializeWithEmptyNavigationPath() {
         // Given & When
-        let coordinator = AvailablePickUpCoordinator()
+        let coordinator = AvailablePickUpCoordinator(dependencyContainer: mockDepdencyContainer)
         
         // Then
         XCTAssertTrue(coordinator.path.isEmpty)
@@ -54,7 +58,7 @@ final class AvailablePickUpCoordinatorTests: XCTestCase {
     
     func testInit_ShouldCreateAvailablePickUpViewModel() {
         // Given & When
-        let coordinator = AvailablePickUpCoordinator()
+        let coordinator = AvailablePickUpCoordinator(dependencyContainer: mockDepdencyContainer)
         
         // Then
         XCTAssertNotNil(coordinator.availablePickUpViewModel)

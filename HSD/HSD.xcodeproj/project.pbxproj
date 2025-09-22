@@ -8,10 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		364CCBBA2E81284D00FAE5A5 /* SharedUtilities in Frameworks */ = {isa = PBXBuildFile; productRef = 364CCBB92E81284D00FAE5A5 /* SharedUtilities */; };
-		3660302C2E60290B00290469 /* AvailablePickUpCellViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3660302B2E60290B00290469 /* AvailablePickUpCellViewModelTests.swift */; };
-		3660302E2E602B5F00290469 /* RouteViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3660302D2E602B5F00290469 /* RouteViewModelTests.swift */; };
-		366030302E6034C700290469 /* AvailablePickUpDetailViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3660302F2E6034C700290469 /* AvailablePickUpDetailViewModelTests.swift */; };
-		366030322E608BA400290469 /* AvailablePickUpCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366030312E608BA400290469 /* AvailablePickUpCoordinatorTests.swift */; };
 		366030422E6B73E200290469 /* Keychain in Frameworks */ = {isa = PBXBuildFile; productRef = 366030412E6B73E200290469 /* Keychain */; };
 		366030472E6B8BA000290469 /* NetworkService in Frameworks */ = {isa = PBXBuildFile; productRef = 366030462E6B8BA000290469 /* NetworkService */; };
 		3684DA0B2E5D089000A20ECE /* HSDApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3684DA0A2E5D089000A20ECE /* HSDApp.swift */; };
@@ -19,7 +15,6 @@
 		3684DA122E5D089200A20ECE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3684DA112E5D089200A20ECE /* Preview Assets.xcassets */; };
 		3684DA362E5D0D1F00A20ECE /* RootCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3684DA352E5D0D1F00A20ECE /* RootCoordinator.swift */; };
 		3684DA382E5D0F6600A20ECE /* RootCoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3684DA372E5D0F6600A20ECE /* RootCoordinatorView.swift */; };
-		3684DA8A2E60153600A20ECE /* AvailablePickUpViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3684DA892E60153600A20ECE /* AvailablePickUpViewModelTests.swift */; };
 		36EA4DAF2E7F5CFD0005FB39 /* Unauthorized in Frameworks */ = {isa = PBXBuildFile; productRef = 36EA4DAE2E7F5CFD0005FB39 /* Unauthorized */; };
 		36EA4DB52E7F60810005FB39 /* DependencyContainer in Frameworks */ = {isa = PBXBuildFile; productRef = 36EA4DB42E7F60810005FB39 /* DependencyContainer */; };
 		36EA4DC52E8123640005FB39 /* Authorized in Frameworks */ = {isa = PBXBuildFile; productRef = 36EA4DC42E8123640005FB39 /* Authorized */; };
@@ -44,10 +39,6 @@
 
 /* Begin PBXFileReference section */
 		364CCBB82E81270200FAE5A5 /* SharedUtilities */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = SharedUtilities; path = ../SharedUtilities; sourceTree = "<group>"; };
-		3660302B2E60290B00290469 /* AvailablePickUpCellViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailablePickUpCellViewModelTests.swift; sourceTree = "<group>"; };
-		3660302D2E602B5F00290469 /* RouteViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteViewModelTests.swift; sourceTree = "<group>"; };
-		3660302F2E6034C700290469 /* AvailablePickUpDetailViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailablePickUpDetailViewModelTests.swift; sourceTree = "<group>"; };
-		366030312E608BA400290469 /* AvailablePickUpCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailablePickUpCoordinatorTests.swift; sourceTree = "<group>"; };
 		3660303F2E6B73CF00290469 /* Keychain */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Keychain; path = ../Keychain; sourceTree = "<group>"; };
 		366030432E6B7C0A00290469 /* NetworkService */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = NetworkService; path = ../NetworkService; sourceTree = "<group>"; };
 		3684DA072E5D089000A20ECE /* HSD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HSD.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -58,7 +49,6 @@
 		3684DA212E5D089300A20ECE /* HSDUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HSDUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3684DA352E5D0D1F00A20ECE /* RootCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootCoordinator.swift; sourceTree = "<group>"; };
 		3684DA372E5D0F6600A20ECE /* RootCoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootCoordinatorView.swift; sourceTree = "<group>"; };
-		3684DA892E60153600A20ECE /* AvailablePickUpViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailablePickUpViewModelTests.swift; sourceTree = "<group>"; };
 		36EA4DAD2E7F5A5E0005FB39 /* Unauthorized */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Unauthorized; path = ../Unauthorized; sourceTree = "<group>"; };
 		36EA4DB32E7F60060005FB39 /* DependencyContainer */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = DependencyContainer; path = ../DependencyContainer; sourceTree = "<group>"; };
 		36EA4DB72E7F6C9B0005FB39 /* Authorized */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Authorized; path = ../Authorized; sourceTree = "<group>"; };
@@ -150,11 +140,6 @@
 		3684DA1A2E5D089300A20ECE /* HSDTests */ = {
 			isa = PBXGroup;
 			children = (
-				3684DA892E60153600A20ECE /* AvailablePickUpViewModelTests.swift */,
-				3660302B2E60290B00290469 /* AvailablePickUpCellViewModelTests.swift */,
-				3660302F2E6034C700290469 /* AvailablePickUpDetailViewModelTests.swift */,
-				3660302D2E602B5F00290469 /* RouteViewModelTests.swift */,
-				366030312E608BA400290469 /* AvailablePickUpCoordinatorTests.swift */,
 			);
 			path = HSDTests;
 			sourceTree = "<group>";
@@ -318,11 +303,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				366030302E6034C700290469 /* AvailablePickUpDetailViewModelTests.swift in Sources */,
-				3684DA8A2E60153600A20ECE /* AvailablePickUpViewModelTests.swift in Sources */,
-				3660302C2E60290B00290469 /* AvailablePickUpCellViewModelTests.swift in Sources */,
-				3660302E2E602B5F00290469 /* RouteViewModelTests.swift in Sources */,
-				366030322E608BA400290469 /* AvailablePickUpCoordinatorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

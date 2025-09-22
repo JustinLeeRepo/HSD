@@ -7,7 +7,8 @@
 
 import XCTest
 import Foundation
-@testable import HSD
+@testable import Authorized
+@testable import NetworkService
 
 final class AvailablePickUpCellViewModelTests: XCTestCase {
     

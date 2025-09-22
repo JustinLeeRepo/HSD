@@ -7,7 +7,8 @@
 
 import XCTest
 import MapKit
-@testable import HSD
+@testable import Authorized
+@testable import NetworkService
 
 final class RouteViewModelTests: XCTestCase {
     

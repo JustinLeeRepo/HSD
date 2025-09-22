@@ -8,7 +8,12 @@
 import Foundation
 import NetworkService
 
-public class DependencyContainer {
+public protocol DependencyContainable {
+    func makeAvailableRideService() -> AvailableRidesServiceProtocol
+    func makeAuthService() -> AuthServiceProtocol
+}
+
+public class DependencyContainer: DependencyContainable {
     private let availableRideService: AvailableRidesServiceProtocol
     private let authService: AuthServiceProtocol
     
@@ -23,5 +28,15 @@ public class DependencyContainer {
     
     public func makeAuthService() -> AuthServiceProtocol {
         return authService
+    }
+}
+
+public class MockDependencyContainer: DependencyContainable {
+    public func makeAvailableRideService() -> AvailableRidesServiceProtocol {
+        return MockAvailableRidesService()
+    }
+    
+    public func makeAuthService() -> AuthServiceProtocol {
+        return MockAuthService()
     }
 }
