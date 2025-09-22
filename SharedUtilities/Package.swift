@@ -4,31 +4,18 @@
 import PackageDescription
 
 let package = Package(
-    name: "Authorized",
-    platforms: [.iOS(.v17)],
+    name: "SharedUtilities",
+    platforms: [.iOS(.v17)], //exposes in build phases library
     products: [
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
-            name: "Authorized",
-            targets: ["Authorized"]
-        ),
-    ],
-    dependencies: [
-        // Dependencies declare other packages that this package depends on.
-        .package(path: "DependencyContainer"),
-        .package(path: "NetworkService"),
-        .package(path: "SharedUtilities")
+            name: "SharedUtilities",
+            targets: ["SharedUtilities"]),
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
         // Targets can depend on other targets in this package and products from dependencies.
         .target(
-            name: "Authorized",
-            dependencies: [
-                "DependencyContainer",
-                "NetworkService",
-                "SharedUtilities"
-            ]
-        ),
+            name: "SharedUtilities"),
     ]
 )

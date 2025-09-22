@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		364CCBBA2E81284D00FAE5A5 /* SharedUtilities in Frameworks */ = {isa = PBXBuildFile; productRef = 364CCBB92E81284D00FAE5A5 /* SharedUtilities */; };
 		3660302C2E60290B00290469 /* AvailablePickUpCellViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3660302B2E60290B00290469 /* AvailablePickUpCellViewModelTests.swift */; };
 		3660302E2E602B5F00290469 /* RouteViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3660302D2E602B5F00290469 /* RouteViewModelTests.swift */; };
 		366030302E6034C700290469 /* AvailablePickUpDetailViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3660302F2E6034C700290469 /* AvailablePickUpDetailViewModelTests.swift */; };
@@ -21,7 +22,6 @@
 		3684DA8A2E60153600A20ECE /* AvailablePickUpViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3684DA892E60153600A20ECE /* AvailablePickUpViewModelTests.swift */; };
 		36EA4DAF2E7F5CFD0005FB39 /* Unauthorized in Frameworks */ = {isa = PBXBuildFile; productRef = 36EA4DAE2E7F5CFD0005FB39 /* Unauthorized */; };
 		36EA4DB52E7F60810005FB39 /* DependencyContainer in Frameworks */ = {isa = PBXBuildFile; productRef = 36EA4DB42E7F60810005FB39 /* DependencyContainer */; };
-		36EA4DC32E8122610005FB39 /* ExtensionsBB in Frameworks */ = {isa = PBXBuildFile; productRef = 36EA4DC22E8122610005FB39 /* ExtensionsBB */; };
 		36EA4DC52E8123640005FB39 /* Authorized in Frameworks */ = {isa = PBXBuildFile; productRef = 36EA4DC42E8123640005FB39 /* Authorized */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		364CCBB82E81270200FAE5A5 /* SharedUtilities */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = SharedUtilities; path = ../SharedUtilities; sourceTree = "<group>"; };
 		3660302B2E60290B00290469 /* AvailablePickUpCellViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailablePickUpCellViewModelTests.swift; sourceTree = "<group>"; };
 		3660302D2E602B5F00290469 /* RouteViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteViewModelTests.swift; sourceTree = "<group>"; };
 		3660302F2E6034C700290469 /* AvailablePickUpDetailViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailablePickUpDetailViewModelTests.swift; sourceTree = "<group>"; };
@@ -68,9 +69,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				36EA4DC32E8122610005FB39 /* ExtensionsBB in Frameworks */,
 				36EA4DC52E8123640005FB39 /* Authorized in Frameworks */,
 				366030422E6B73E200290469 /* Keychain in Frameworks */,
+				364CCBBA2E81284D00FAE5A5 /* SharedUtilities in Frameworks */,
 				36EA4DB52E7F60810005FB39 /* DependencyContainer in Frameworks */,
 				36EA4DAF2E7F5CFD0005FB39 /* Unauthorized in Frameworks */,
 				366030472E6B8BA000290469 /* NetworkService in Frameworks */,
@@ -104,6 +105,7 @@
 		3684D9FE2E5D089000A20ECE = {
 			isa = PBXGroup;
 			children = (
+				364CCBB82E81270200FAE5A5 /* SharedUtilities */,
 				36EA4DB32E7F60060005FB39 /* DependencyContainer */,
 				366030432E6B7C0A00290469 /* NetworkService */,
 				3660303F2E6B73CF00290469 /* Keychain */,
@@ -187,8 +189,8 @@
 				366030462E6B8BA000290469 /* NetworkService */,
 				36EA4DAE2E7F5CFD0005FB39 /* Unauthorized */,
 				36EA4DB42E7F60810005FB39 /* DependencyContainer */,
-				36EA4DC22E8122610005FB39 /* ExtensionsBB */,
 				36EA4DC42E8123640005FB39 /* Authorized */,
+				364CCBB92E81284D00FAE5A5 /* SharedUtilities */,
 			);
 			productName = HSD;
 			productReference = 3684DA072E5D089000A20ECE /* HSD.app */;
@@ -642,6 +644,10 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		364CCBB92E81284D00FAE5A5 /* SharedUtilities */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SharedUtilities;
+		};
 		366030412E6B73E200290469 /* Keychain */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Keychain;
@@ -657,10 +663,6 @@
 		36EA4DB42E7F60810005FB39 /* DependencyContainer */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = DependencyContainer;
-		};
-		36EA4DC22E8122610005FB39 /* ExtensionsBB */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = ExtensionsBB;
 		};
 		36EA4DC42E8123640005FB39 /* Authorized */ = {
 			isa = XCSwiftPackageProductDependency;

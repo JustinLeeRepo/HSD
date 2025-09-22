@@ -5,7 +5,7 @@
 //  Created by Justin Lee on 8/27/25.
 //
 
-import ExtensionsBB
+import SharedUtilities
 import MapKit
 import NetworkService
 import SwiftUI
