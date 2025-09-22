@@ -3,4 +3,54 @@
    uuid = "DB212162-5B25-40AB-824C-E7B9D365C387"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D375692C-BCC6-4D5D-AC08-3ED46A2ABEAF"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../Authorized/Tests/AuthorizedTests/RouteViewModelTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "298"
+            endingLineNumber = "298"
+            landmarkName = "testCameraPosition_WithDistantWaypoints()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "D375692C-BCC6-4D5D-AC08-3ED46A2ABEAF - 8ceb918b1c0a91a0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AuthorizedTests.RouteViewModelTests.testCameraPosition_WithDistantWaypoints() -&gt; ()"
+                  moduleName = "AuthorizedTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/justinlee/Development/Interview%20exams/HSD/Authorized/Tests/AuthorizedTests/RouteViewModelTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "298"
+                  endingLineNumber = "298"
+                  offsetFromSymbolStart = "922">
+               </Location>
+               <Location
+                  uuid = "D375692C-BCC6-4D5D-AC08-3ED46A2ABEAF - 8ceb918b1c0a91a0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AuthorizedTests.RouteViewModelTests.testCameraPosition_WithDistantWaypoints() -&gt; ()"
+                  moduleName = "AuthorizedTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/justinlee/Development/Interview%20exams/HSD/Authorized/Tests/AuthorizedTests/RouteViewModelTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "298"
+                  endingLineNumber = "298"
+                  offsetFromSymbolStart = "1183">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
