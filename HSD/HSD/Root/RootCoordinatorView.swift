@@ -5,7 +5,10 @@
 //  Created by Justin Lee on 8/25/25.
 //
 
+import Authorized
+import DependencyContainer
 import SwiftUI
+import Unauthorized
 
 struct RootCoordinatorView: View {
     var coordinator: RootCoordinator

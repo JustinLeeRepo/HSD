@@ -113,3 +113,21 @@ public class AvailableRidesService: AvailableRidesServiceProtocol {
         return response.rides
     }
 }
+
+public class MockAvailableRidesService: AvailableRidesServiceProtocol {
+    private let delayInSeconds: Int
+    
+    public init(delayInSeconds: Int = 0) {
+      self.delayInSeconds = delayInSeconds
+    }
+    
+    public func fetchRides() async throws -> [Ride] {
+        try await Task.sleep(for: .seconds(delayInSeconds))
+        return [Ride.mock()]
+    }
+    
+    public func fetchRidesPage(pageSize: Int?) async throws -> [Ride] {
+        try await Task.sleep(for: .seconds(delayInSeconds))
+        return [Ride.mock()]
+    }
+}

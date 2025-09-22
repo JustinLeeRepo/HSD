@@ -87,3 +87,29 @@ public class AuthService: AuthServiceProtocol {
         }
     }
 }
+
+public class MockAuthService: AuthServiceProtocol {
+    private let userState: CurrentUser = .shared
+    public init() {}
+    
+    public func signIn(username: String, password: String) async throws {
+        throw ServiceError.unauthorized
+    }
+    
+    public func expressSignIn() async throws {
+        let token = "Mila"
+        try Keychain.shared.update(id: .authToken, stringData: token)
+        let user = User(token: token)
+        Task { @MainActor in
+            userState.setCurrentUser(user)
+        }
+    }
+    
+    public func signOut() async throws {
+        try Keychain.shared.delete(id: .authToken)
+        
+        Task { @MainActor in
+            userState.clearUser()
+        }
+    }
+}

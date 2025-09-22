@@ -1,0 +1,32 @@
+//
+//  UnauthorizedCoordinatorView.swift
+//  HSD
+//
+//  Created by Justin Lee on 8/25/25.
+//
+
+import DependencyContainer
+import SwiftUI
+
+public struct UnauthorizedCoordinatorView: View {
+    @Bindable var coordinator: UnauthorizedCoordinator
+    
+    public init(coordinator: UnauthorizedCoordinator) {
+        self.coordinator = coordinator
+    }
+    
+    public var body: some View {
+        NavigationStack(path: $coordinator.path) {
+            UnauthorizedView(viewModel: coordinator.unauthorizedViewModel)
+                .navigationDestination(for: SignInViewModel.self) { viewModel in
+                    SignInView(viewModel: viewModel)
+                }
+        }
+    }
+}
+
+#Preview {
+    let dependencyContainer = DependencyContainer()
+    let coordinator = UnauthorizedCoordinator(dependencyContainer: dependencyContainer)
+    return UnauthorizedCoordinatorView(coordinator: coordinator)
+}
