@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		364CCBBA2E81284D00FAE5A5 /* SharedUtilities in Frameworks */ = {isa = PBXBuildFile; productRef = 364CCBB92E81284D00FAE5A5 /* SharedUtilities */; };
+		364CCBBD2E831C2800FAE5A5 /* SharedUI in Frameworks */ = {isa = PBXBuildFile; productRef = 364CCBBC2E831C2800FAE5A5 /* SharedUI */; };
 		366030422E6B73E200290469 /* Keychain in Frameworks */ = {isa = PBXBuildFile; productRef = 366030412E6B73E200290469 /* Keychain */; };
 		366030472E6B8BA000290469 /* NetworkService in Frameworks */ = {isa = PBXBuildFile; productRef = 366030462E6B8BA000290469 /* NetworkService */; };
 		3684DA0B2E5D089000A20ECE /* HSDApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3684DA0A2E5D089000A20ECE /* HSDApp.swift */; };
@@ -39,6 +40,7 @@
 
 /* Begin PBXFileReference section */
 		364CCBB82E81270200FAE5A5 /* SharedUtilities */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = SharedUtilities; path = ../SharedUtilities; sourceTree = "<group>"; };
+		364CCBBB2E83111A00FAE5A5 /* SharedUI */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = SharedUI; path = ../SharedUI; sourceTree = "<group>"; };
 		3660303F2E6B73CF00290469 /* Keychain */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Keychain; path = ../Keychain; sourceTree = "<group>"; };
 		366030432E6B7C0A00290469 /* NetworkService */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = NetworkService; path = ../NetworkService; sourceTree = "<group>"; };
 		3684DA072E5D089000A20ECE /* HSD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HSD.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -62,6 +64,7 @@
 				36EA4DC52E8123640005FB39 /* Authorized in Frameworks */,
 				366030422E6B73E200290469 /* Keychain in Frameworks */,
 				364CCBBA2E81284D00FAE5A5 /* SharedUtilities in Frameworks */,
+				364CCBBD2E831C2800FAE5A5 /* SharedUI in Frameworks */,
 				36EA4DB52E7F60810005FB39 /* DependencyContainer in Frameworks */,
 				36EA4DAF2E7F5CFD0005FB39 /* Unauthorized in Frameworks */,
 				366030472E6B8BA000290469 /* NetworkService in Frameworks */,
@@ -95,6 +98,7 @@
 		3684D9FE2E5D089000A20ECE = {
 			isa = PBXGroup;
 			children = (
+				364CCBBB2E83111A00FAE5A5 /* SharedUI */,
 				364CCBB82E81270200FAE5A5 /* SharedUtilities */,
 				36EA4DB32E7F60060005FB39 /* DependencyContainer */,
 				366030432E6B7C0A00290469 /* NetworkService */,
@@ -176,6 +180,7 @@
 				36EA4DB42E7F60810005FB39 /* DependencyContainer */,
 				36EA4DC42E8123640005FB39 /* Authorized */,
 				364CCBB92E81284D00FAE5A5 /* SharedUtilities */,
+				364CCBBC2E831C2800FAE5A5 /* SharedUI */,
 			);
 			productName = HSD;
 			productReference = 3684DA072E5D089000A20ECE /* HSD.app */;
@@ -627,6 +632,10 @@
 		364CCBB92E81284D00FAE5A5 /* SharedUtilities */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = SharedUtilities;
+		};
+		364CCBBC2E831C2800FAE5A5 /* SharedUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SharedUI;
 		};
 		366030412E6B73E200290469 /* Keychain */ = {
 			isa = XCSwiftPackageProductDependency;

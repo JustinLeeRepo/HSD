@@ -6,11 +6,12 @@
 //
 
 import Combine
-import SwiftUI
 import NetworkService
+import SharedUI
+import SwiftUI
 
 struct AvailablePickUpView: View {
-    var viewModel: AvailablePickUpViewModel
+    @Bindable var viewModel: AvailablePickUpViewModel
     
     var body: some View {
         VStack {
@@ -32,17 +33,12 @@ struct AvailablePickUpView: View {
                 }
             }
             
-            if let error = viewModel.error {
-                Text(error.localizedDescription)
-                    .padding()
-                    .font(.caption)
-                    .foregroundStyle(.pink)
-                    .opacity(viewModel.error == nil ? 0 : 1)
-            }
         }
         .overlay {
             if viewModel.isLoading {
                 ProgressView()
+            } else {
+                ErrorView(viewModel: viewModel.errorViewModel)
             }
         }
     }

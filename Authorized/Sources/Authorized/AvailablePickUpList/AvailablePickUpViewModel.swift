@@ -9,12 +9,14 @@ import Combine
 import Foundation
 import NetworkService
 import SwiftUI
+import SharedUI
 
 @Observable
 class AvailablePickUpViewModel {
     var cellViewModels: [AvailablePickUpCellViewModel] = []
     var error: Error?
     var isLoading = false
+    let errorViewModel: ErrorViewModel
     
     private let availableRideService: AvailableRidesServiceProtocol
     private let numberFormatter: NumberFormatter
@@ -26,6 +28,7 @@ class AvailablePickUpViewModel {
         self.numberFormatter = numberFormatter
         self.availablePickUpEventPublisher = eventPublisher
         self.availableRideService = availableRideService
+        self.errorViewModel = ErrorViewModel()
         
         Task {
             await fetchRide()
@@ -58,7 +61,7 @@ class AvailablePickUpViewModel {
             print("error \(error)")
             Task { @MainActor in
                 isLoading = false
-                self.error = error
+                self.errorViewModel.error = error
             }
         }
     }

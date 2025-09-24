@@ -17,7 +17,8 @@ let package = Package(
         // Dependencies declare other packages that this package depends on.
         .package(path: "DependencyContainer"),
         .package(path: "NetworkService"),
-        .package(path: "SharedUtilities")
+        .package(path: "SharedUtilities"),
+        .package(path: "SharedUI")
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
@@ -27,7 +28,8 @@ let package = Package(
             dependencies: [
                 "DependencyContainer",
                 "NetworkService",
-                "SharedUtilities"
+                "SharedUtilities",
+                "SharedUI"
             ]
         ),
         .testTarget(

@@ -6,20 +6,22 @@
 //
 
 import DependencyContainer
-import SwiftUI
 import NetworkService
+import SharedUI
+import SwiftUI
 
 @Observable
 class SignInViewModel {
     var model: SignInModel
-    var error: Error?
     var isLoading = false
+    let errorViewModel: ErrorViewModel
     
     private let authService: AuthServiceProtocol
     
-    init(model: SignInModel, dependencyContainer: DependencyContainer) {
+    init(model: SignInModel, dependencyContainer: DependencyContainable) {
         self.model = model
         self.authService = dependencyContainer.makeAuthService()
+        errorViewModel = ErrorViewModel()
     }
     
     var isUsernameEmpty: Bool {
@@ -80,13 +82,13 @@ class SignInViewModel {
                 dismiss()
                 Task { @MainActor in
                     self.isLoading = false
-                    self.error = nil
+                    self.errorViewModel.error = nil
                 }
             }
             catch {
                 Task { @MainActor in
                     self.isLoading = false
-                    self.error = error
+                    self.errorViewModel.error = error
                 }
             }
         }

@@ -22,9 +22,9 @@ public class UnauthorizedCoordinator {
     
     private let unauthorizedEventPublisher: PassthroughSubject<UnauthorizedEvent, Never>
     private var cancellables = Set<AnyCancellable>()
-    private let dependencyContainer: DependencyContainer
+    private let dependencyContainer: DependencyContainable
     
-    public init(dependencyContainer: DependencyContainer) {
+    public init(dependencyContainer: DependencyContainable) {
         let unauthorizedEventPublisher = PassthroughSubject<UnauthorizedEvent, Never>()
         
         self.unauthorizedEventPublisher = unauthorizedEventPublisher
