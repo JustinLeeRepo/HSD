@@ -5,12 +5,13 @@
 //  Created by Justin Lee on 8/25/25.
 //
 
-import SwiftUI
 import Combine
 import NetworkService
+import SharedUI
+import SwiftUI
 
 struct UnauthorizedView: View {
-    var viewModel: UnauthorizedViewModel
+    @Bindable var viewModel: UnauthorizedViewModel
     
     var body: some View {
         VStack {
@@ -31,13 +32,7 @@ struct UnauthorizedView: View {
             }
             .inputStyling()
             
-            if let error = viewModel.error {
-                Text(error.localizedDescription)
-                    .padding()
-                    .font(.caption)
-                    .foregroundStyle(.pink)
-                    .opacity(viewModel.error == nil ? 0 : 1)
-            }
+            ErrorView(viewModel: viewModel.errorViewModel)
         }
         .overlay {
             if viewModel.isLoading {

@@ -6,6 +6,7 @@
 //
 
 import DependencyContainer
+import SharedUI
 import SwiftUI
 
 public struct AuthorizedCoordinatorView: View {
@@ -19,30 +20,16 @@ public struct AuthorizedCoordinatorView: View {
     public var body: some View {
         TabView(selection: $coordinator.tab) {
             AvailablePickUpCoordinatorView(coordinator: coordinator.availablePickUpCoordinator)
-            .tabItem {
-                generateLabel(title: "Available Rides", image: "dog")
-            }
-            .tag(Tab.first)
-            
-            Button {
-                Task {
-                    await coordinator.signOut()
+                .tabItem {
+                    generateLabel(title: "Available Rides", image: "dog")
                 }
-            } label: {
-                Text("sign out")
-            }
-            .tabItem {
-                generateLabel(title: "Account", image: "cat")
-            }
-            .tag(Tab.second)
-        }
-        
-        if let error = coordinator.error {
-            Text(error.localizedDescription)
-                .padding()
-                .font(.caption)
-                .foregroundStyle(.pink)
-                .opacity(coordinator.error == nil ? 0 : 1)
+                .tag(Tab.first)
+            
+            SignOutView(viewModel: coordinator.signOutViewModel)
+                .tabItem {
+                    generateLabel(title: "Account", image: "cat")
+                }
+                .tag(Tab.second)
         }
     }
     

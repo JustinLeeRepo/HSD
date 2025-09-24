@@ -18,11 +18,11 @@ import SwiftUI
     let unauthorizedCoordinator: UnauthorizedCoordinator
     var authorizedCoordinator: AuthorizedCoordinator?
     
-    private let dependencyContainer: DependencyContainer
+    private let dependencyContainer: DependencyContainable
     private var currentUser = CurrentUser.shared
     private var cancellables = Set<AnyCancellable>()
     
-    init(dependencyContainer: DependencyContainer) {
+    init(dependencyContainer: DependencyContainable) {
         self.dependencyContainer = dependencyContainer
         self.unauthorizedCoordinator = UnauthorizedCoordinator(dependencyContainer: dependencyContainer)
         setupListener()

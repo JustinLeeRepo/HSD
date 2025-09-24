@@ -7,11 +7,12 @@
 
 import Combine
 import NetworkService
+import SharedUI
 import SwiftUI
 
 @Observable class UnauthorizedViewModel {
     var isLoading = false
-    var error: Error?
+    var errorViewModel: ErrorViewModel
     
     private let unauthorizedEventPublisher: PassthroughSubject<UnauthorizedEvent, Never>
     private let authService: AuthServiceProtocol
@@ -20,6 +21,7 @@ import SwiftUI
          authService: AuthServiceProtocol) {
         self.unauthorizedEventPublisher = unauthorizedEventPublisher
         self.authService = authService
+        self.errorViewModel = ErrorViewModel()
     }
     
     func proceedToSignIn() {
@@ -47,7 +49,7 @@ import SwiftUI
                 withAnimation {
                     self.isLoading = false
                 }
-                self.error = error
+                self.errorViewModel.error = error
             }
         }
     }

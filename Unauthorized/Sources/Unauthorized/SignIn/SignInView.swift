@@ -6,6 +6,7 @@
 //
 
 import DependencyContainer
+import SharedUI
 import SwiftUI
 
 struct SignInView: View {
@@ -27,13 +28,7 @@ struct SignInView: View {
             .inputStyling()
             .disabled(viewModel.isProceedButtonDisabled)
             
-            if let error = viewModel.error {
-                Text(error.localizedDescription)
-                    .padding()
-                    .font(.caption)
-                    .foregroundStyle(.pink)
-                    .opacity(viewModel.error == nil ? 0 : 1)
-            }
+            ErrorView(viewModel: viewModel.errorViewModel)
         }
         .overlay {
             if viewModel.isLoading {

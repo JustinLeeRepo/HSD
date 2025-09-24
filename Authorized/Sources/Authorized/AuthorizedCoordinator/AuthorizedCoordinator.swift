@@ -8,7 +8,7 @@
 import Combine
 import DependencyContainer
 import Foundation
-import NetworkService
+import SharedUI
 
 @Observable 
 public class AuthorizedCoordinator {
@@ -20,25 +20,13 @@ public class AuthorizedCoordinator {
     }
     
     var tab: Tab = .first
-    private(set) var error: Error?
     
     let availablePickUpCoordinator: AvailablePickUpCoordinator
+    let signOutViewModel: SignOutViewModel
     private var cancellables = Set<AnyCancellable>()
-    private let authService: AuthServiceProtocol
     
-    public init(dependencyContainer: DependencyContainer) {
+    public init(dependencyContainer: DependencyContainable) {
         self.availablePickUpCoordinator = AvailablePickUpCoordinator(dependencyContainer: dependencyContainer)
-        self.authService = dependencyContainer.makeAuthService()
-    }
-    
-    func signOut() async {
-        do {
-            try await authService.signOut()
-        }
-        catch {
-            Task { @MainActor in
-                self.error = error
-            }
-        }
+        self.signOutViewModel = SignOutViewModel(authService: dependencyContainer.makeAuthService())
     }
 }
