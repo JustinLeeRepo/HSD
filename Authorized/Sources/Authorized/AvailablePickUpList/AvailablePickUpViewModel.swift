@@ -13,14 +13,36 @@ import SharedUI
 
 @Observable
 class AvailablePickUpViewModel {
-    var cellViewModels: [AvailablePickUpCellViewModel] = []
-    var error: Error?
-    var isLoading = false
-    let errorViewModel: ErrorViewModel
+    enum State {
+        case error(ErrorViewModel)
+        case loading
+        case success([AvailablePickUpCellViewModel])
+        case empty
+    }
+    
+    var state: State {
+        if errorViewModel.error != nil {
+            return .error(errorViewModel)
+        }
+        else if isLoading {
+            return .loading
+        }
+        else if !cellViewModels.isEmpty {
+            return .success(cellViewModels)
+        }
+        else {
+            return .empty
+        }
+    }
+    
+    private var cellViewModels: [AvailablePickUpCellViewModel] = []
+    private let errorViewModel: ErrorViewModel
     
     private let availableRideService: AvailableRidesServiceProtocol
     private let numberFormatter: NumberFormatter
     private let availablePickUpEventPublisher: PassthroughSubject<AvailablePickUpEvent, Never>
+    
+    private var isLoading = false
     
     init(numberFormatter: NumberFormatter, 
          eventPublisher: PassthroughSubject<AvailablePickUpEvent, Never>,
@@ -54,6 +76,7 @@ class AvailablePickUpViewModel {
             
             Task { @MainActor in
                 self.cellViewModels.append(contentsOf: viewModels)
+                self.errorViewModel.error = nil
                 isLoading = false
             }
         }
