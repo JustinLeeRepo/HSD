@@ -13,10 +13,21 @@ import NetworkService
 import SwiftUI
 
 @Observable class RootCoordinator {
-    var isAuthorized = false
+    enum State {
+        case authorized(AuthorizedCoordinator)
+        case unauthorized(UnauthorizedCoordinator)
+    }
     
-    let unauthorizedCoordinator: UnauthorizedCoordinator
-    var authorizedCoordinator: AuthorizedCoordinator?
+    var state: State {
+        if let authorizedCoordinator = authorizedCoordinator {
+            return .authorized(authorizedCoordinator)
+        }
+        
+        return .unauthorized(unauthorizedCoordinator)
+    }
+    
+    private let unauthorizedCoordinator: UnauthorizedCoordinator
+    private var authorizedCoordinator: AuthorizedCoordinator?
     
     private let dependencyContainer: DependencyContainable
     private var currentUser = CurrentUser.shared
@@ -33,7 +44,6 @@ import SwiftUI
         currentUser.userPublisher
             .sink { [weak self] user in
                 guard let self = self else { return }
-                self.isAuthorized = user != nil
                 
                 if let user = user {
                     Task { @MainActor in
