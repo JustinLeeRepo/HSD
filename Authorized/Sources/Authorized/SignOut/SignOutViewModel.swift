@@ -30,10 +30,4 @@ class SignOutViewModel {
             }
         }
     }
-    
-    func setErrorFoo() {
-        Task { @MainActor in
-            self.errorViewModel.error = SampleError.errorRequired
-        }
-    }
 }

@@ -24,12 +24,6 @@ struct SignOutView: View {
                 Text("sign out")
             }
             
-            Button {
-                viewModel.setErrorFoo()
-            } label: {
-                Text("set")
-            }
-            
             ErrorView(viewModel: viewModel.errorViewModel)
         }
     }
