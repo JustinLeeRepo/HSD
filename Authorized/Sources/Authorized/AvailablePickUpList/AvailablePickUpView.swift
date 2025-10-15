@@ -41,6 +41,7 @@ struct AvailablePickUpView: View {
                             }
                             .padding(.horizontal)
                     }
+                    .buttonStyle(.plain)
                 }
             }
         }

@@ -18,7 +18,7 @@ struct AvailableRidesEndpoint: APIEndpoint {
         case fetchRidesPage(token: String, page: Int?, pageSize: Int?)
     }
     
-    let endpoint = "3aeeaafe-77fe-4953-b0a9-4300d332df7b"
+    let endpoint = "a3dc28f5-494f-4286-a007-f290c89fe11d"
     let action: Action
     
     var path: String {
